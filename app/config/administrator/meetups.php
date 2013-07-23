@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Actors model config
+ * Meetups model config
  */
 
 return array(
