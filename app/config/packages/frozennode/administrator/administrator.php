@@ -14,7 +14,7 @@ return array(
 	 *
 	 * @type string
 	 */
-	'title' => 'Admin',
+	'title' => 'edPUG Admin',
 
 	/**
 	 * The path to your model config directory
@@ -48,7 +48,7 @@ return array(
 	 *		'Settings' => array('settings.site', 'settings.ecommerce', 'settings.social'),
 	 *	)
 	 */
-	'menu' => array(),
+	'menu' => array('Meetups' => array('meetups', 'talks', 'speakers', 'videos')),
 
 	/**
 	 * The permission option is the highest-level authentication check that lets you define a closure that should return true if the current user
@@ -58,7 +58,8 @@ return array(
 	 */
 	'permission'=> function()
 	{
-		return Auth::check();
+    return true;
+//		return Auth::check();
 	},
 
 	/**
@@ -74,14 +75,14 @@ return array(
 	 *
 	 * @type string
 	 */
-	'dashboard_view' => '',
+	'dashboard_view' => 'administrator.dashboard',
 
 	/**
 	 * The menu item that should be used as the default landing page of the administrative section
 	 *
 	 * @type string
 	 */
-	'home_page' => '',
+	'home_page' => 'meetups',
 
 	/**
 	 * The login path is the path where Administrator will send the user if they fail a permission check
