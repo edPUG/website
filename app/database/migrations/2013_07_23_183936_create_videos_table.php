@@ -13,6 +13,7 @@ class CreateVideosTable extends Migration {
 	{
     Schema::create('videos', function($table)
     {
+      $table->engine = 'InnoDB';
       $table->increments('id');
       $table->integer('sort_order');
       $table->string('title');

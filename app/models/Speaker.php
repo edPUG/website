@@ -1,5 +1,9 @@
 <?php
 
-class Speaker extends Eloquent{
+class Speaker extends Eloquent {
+
+  public function talks() {
+    return $this->belongsToMany('Talk');
+  }
 
 }

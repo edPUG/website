@@ -13,6 +13,7 @@ class CreateTalkTable extends Migration {
   {
     Schema::create('talks', function($table)
     {
+      $table->engine = 'InnoDB';
       $table->increments('id');
       $table->integer('sort_order')->unsigned()->nullable();
       $table->string('title');

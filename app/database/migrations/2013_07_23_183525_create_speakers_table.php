@@ -13,6 +13,7 @@ class CreateSpeakersTable extends Migration {
   {
     Schema::create('speakers', function($table)
     {
+      $table->engine = 'InnoDB';
       $table->increments('id');
       $table->string('forename');
       $table->string('surname');

@@ -13,6 +13,7 @@ class AddMeetupTable extends Migration {
   {
     Schema::create('meetups', function($table)
     {
+      $table->engine = 'InnoDB';     
       $table->increments('id');
       $table->date('start_date');
       $table->time('start_time');
