@@ -13,5 +13,6 @@
 
 Route::get('/', function()
 {
-	return View::make('hello');
+  $meetups = Meetup::all();
+  print_r($meetups); exit;
 });
