@@ -5,3 +5,7 @@ composer.lock
 .DS_Store
 /nbproject
 /public/packages
+public/uploads/speakers/originals/
+public/uploads/speakers/thumbs/full/
+public/uploads/speakers/thumbs/medium/
+public/uploads/speakers/thumbs/small/
