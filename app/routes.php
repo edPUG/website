@@ -11,8 +11,4 @@
 |
 */
 
-Route::get('/', function()
-{
-  $meetups = Meetup::all();
-  print_r($meetups); exit;
-});
+Route::get('/', array('as' => 'home', 'uses' => 'HomeController@showHomepage'));
