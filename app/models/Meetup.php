@@ -10,4 +10,17 @@ class Meetup extends Eloquent {
     return $this->hasMany('Video');
   }
   
+  public static function getNextMeetup() {
+    
+    $meetup = Meetup::whereRaw('TO_DAYS(start_date) - TO_DAYS(NOW()) >= 0')
+                ->orderBy('start_date', 'ASC')
+                ->first();
+     
+    return $meetup;
+
+  }
+  
+  
+  
+  
 }
