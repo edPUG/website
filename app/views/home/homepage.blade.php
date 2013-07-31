@@ -20,6 +20,12 @@
 
     <h2>The next meetup</h2>
     
+    @if ($next_meetup)
+    
+      @include('includes.meetup.full_meetup_detail', array('meetup' => $next_meetup))  
+    
+    @else
+    
     <p>
     Details of the next edPUG are being confirmed. It will either be a talk / demonstration / hack session or just general chat.
 edPUG goes ahead every month regardless of whether a talk takes place or not, so get it your calendar as a recurring event now!
@@ -28,6 +34,9 @@ edPUG goes ahead every month regardless of whether a talk takes place or not, so
     <p>The best way to not miss put on the next edPUG is to subscribe to our newsletter.</p>
     
     <p>[EventBrite subscribe]</p>
+    
+    @endif
+    
     
 </div>
 
