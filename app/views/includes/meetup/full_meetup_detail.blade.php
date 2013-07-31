@@ -27,7 +27,7 @@
         </div>{{-- /.span8 --}}
         
         <div class="span4">
-            <h4>Address</h4>
+            <h4>Where?</h4>
             <address>
                 Line Digital Ltd.<br />
                 77 Brunswick Street<br />
