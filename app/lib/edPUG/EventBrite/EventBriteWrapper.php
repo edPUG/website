@@ -15,6 +15,8 @@ class EventBriteWrapper {
     {
 			$startDateTime = $meetup->getStartDateTime();
 			$endDateTime = $meetup->getEndDateTime();
+			$description = $meetup->getEventBriteDescription();
+			$title = $meetup->title;
 
 			exit;
 

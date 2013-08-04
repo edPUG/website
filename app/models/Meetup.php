@@ -21,6 +21,10 @@ class Meetup extends Eloquent {
   public function videos() {
     return $this->hasMany('Video');
   }
+
+	public function getEventBriteDescription() {
+		return $this->description;
+	}
   
   public function getLongStartDateTimeAttribute() {
 		return $this->getStartDateTime()->format('D jS F Y g:ia');
