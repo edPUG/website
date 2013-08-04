@@ -11,7 +11,7 @@ class DateHelper {
 
     $timeRemaining = $difference->format('%a days');
 
-    if($difference->format('%a') == 1){
+    if($difference->format('%a') <= 1){
       $timeRemaining = $difference->format('%h hours, %i minutes');
     }
 
