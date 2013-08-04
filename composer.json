@@ -4,8 +4,8 @@
 	"keywords": ["framework", "laravel"],
 	"require": {
 		"laravel/framework": "4.0.*",
-                "frozennode/administrator": "dev-dev",
-                "patricktalmadge/bootstrapper": "dev-develop"
+		"frozennode/administrator": "dev-dev",
+		"patricktalmadge/bootstrapper": "dev-develop"
 	},
 	"autoload": {
 		"classmap": [
@@ -15,7 +15,7 @@
 			"app/database/migrations",
 			"app/database/seeds",
 			"app/tests/TestCase.php",
-			"app/library"
+			"app/lib"
 		]
 	},
 	"scripts": {

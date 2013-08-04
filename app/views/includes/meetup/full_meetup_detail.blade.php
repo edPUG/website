@@ -4,7 +4,7 @@
         
             <h3>{{ $meetup->title }}</h3>
 
-            <small>{{ $meetup->getLongDateTime() }}</small>
+            <small>{{ $meetup->long_start_date_time }}</small>
 
             @if ($meetup->description)
              {{ $meetup->description }}
