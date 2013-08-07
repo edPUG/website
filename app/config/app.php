@@ -118,7 +118,8 @@ return array(
 		'Basset\BassetServiceProvider',
 		'edPUG\EventBrite\EventBriteServiceProvider',
     'Former\FormerServiceProvider',
-    'Way\Generators\GeneratorsServiceProvider'  
+    'Way\Generators\GeneratorsServiceProvider',  
+		'edPUG\EventBrite\EventBriteServiceProvider'    
 	),
 
 	/*
