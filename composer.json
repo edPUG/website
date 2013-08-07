@@ -4,8 +4,8 @@
 	"keywords": ["framework", "laravel"],
 	"require": {
 		"laravel/framework": "4.0.*",
-                "frozennode/administrator": "dev-dev",
-                "patricktalmadge/bootstrapper": "dev-develop"
+		"frozennode/administrator": "dev-dev",
+		"patricktalmadge/bootstrapper": "dev-develop"
 	},
 	"autoload": {
 		"classmap": [
