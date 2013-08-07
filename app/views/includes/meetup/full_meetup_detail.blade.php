@@ -10,14 +10,21 @@
              {{ $meetup->description }}
             @endif
 
-
             @if ($meetup->talks)
 
               @foreach ($meetup->talks as $talk)
                 <h4>Talk: {{ $talk->title }}</h4>
-                <p>
-                    Speakers: TODO           
-                </p>
+                
+                @if ($talk->speakers)
+                  <p>
+                  Speakers:
+                  @if ($lastIdx = count($talk->speakers) - 1) @endif
+                                   
+                  @foreach ($talk->speakers as $idx => $speaker)
+                    {{ $speaker->getFullName() }}@if ($idx != $lastIdx), @endif
+                  @endforeach
+                  </p>
+                @endif
 
                 {{ $talk->description }}
 
