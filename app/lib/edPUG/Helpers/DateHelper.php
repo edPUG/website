@@ -5,7 +5,7 @@ namespace edPUG\Helpers;
 class DateHelper {
 
   public static function timeUntilNextMeetup(){
-    $nextMeetup = new \DateTime('third tuesday');
+    $nextMeetup = \Meetup::getNextMeetup()->getStartDateTime();
     $now = new \DateTime();
     $difference = $nextMeetup->diff($now);
 
