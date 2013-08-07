@@ -48,7 +48,11 @@ return array(
 	 *		'Settings' => array('settings.site', 'settings.ecommerce', 'settings.social'),
 	 *	)
 	 */
-	'menu' => array('Meetups' => array('meetups', 'talks','speakers')),
+	'menu' => array(
+            'Meetups' => array('meetups', 'talks', 'speakers'),
+            'Contact' => array('contact_messages')
+            
+            ),
 
 	/**
 	 * The permission option is the highest-level authentication check that lets you define a closure that should return true if the current user
