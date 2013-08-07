@@ -23,6 +23,12 @@ class HomeController extends BaseController {
         $newContact->from_email = Input::get("email");
         $newContact->message = Input::get("message");
         $newContact->save();
-        var_dump($newContact);
+        return Response::json(
+            array(
+                "status" => 100, 
+                "message" => "sent succesfully"
+            )
+        );
+        
     }
 }
