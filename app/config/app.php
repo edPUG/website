@@ -116,7 +116,6 @@ return array(
 		'Frozennode\Administrator\AdministratorServiceProvider',
 		'Bootstrapper\BootstrapperServiceProvider',
 		'Basset\BassetServiceProvider',
-		'edPUG\EventBrite\EventBriteServiceProvider',
     'Former\FormerServiceProvider',
     'Way\Generators\GeneratorsServiceProvider',  
 		'edPUG\EventBrite\EventBriteServiceProvider'    
