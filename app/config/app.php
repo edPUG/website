@@ -115,9 +115,9 @@ return array(
 		'Illuminate\Workbench\WorkbenchServiceProvider',
                 'Frozennode\Administrator\AdministratorServiceProvider',
                 'Bootstrapper\BootstrapperServiceProvider',
-                'Basset\BassetServiceProvider',
-                'Former\FormerServiceProvider',
-                'Way\Generators\GeneratorsServiceProvider'  
+                'Basset\BassetServiceProvider'
+                //'Former\FormerServiceProvider',
+                //'Way\Generators\GeneratorsServiceProvider'  
 	),
 
 	/*
