@@ -5,7 +5,8 @@
 	"require": {
 		"laravel/framework": "4.0.*",
 		"frozennode/administrator": "dev-dev",
-		"patricktalmadge/bootstrapper": "dev-develop"
+		"patricktalmadge/bootstrapper": "dev-develop",
+    "anahkiasen/former": "dev-agnostic"
 	},
 	"autoload": {
 		"classmap": [
