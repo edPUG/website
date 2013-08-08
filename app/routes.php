@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -10,5 +9,11 @@
 | and give it the Closure to execute when that URI is requested.
 |
 */
-
 Route::get('/', array('as' => 'home', 'uses' => 'HomeController@showHomepage'));
+Route::post(
+    '/contact-form-ajax', 
+    array(
+        'as' => 'contact-form-endpoint', 
+        'uses' => 'HomeController@contactFormEndpoint'
+    )
+);
