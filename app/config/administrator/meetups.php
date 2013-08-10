@@ -75,7 +75,11 @@ return array(
 				'title' => array(
 					'title' => 'Title',
 					'type' => 'text',
-					),
+        ),
+        'eventbrite_id' => array(
+          'title' => 'Eventbrite ID',
+          'type'  => 'text'
+        ),
 				'start_date' => array(
 					'title' => 'Start Date',
 					'type' => 'date',
