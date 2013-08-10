@@ -10,7 +10,7 @@
         PHP &amp; JavaScript frameworks / DHTML & AJAX / programming methodologies and design patterns / CMS&rsquo;s / e-commerce / hosting / scalability / deployment / Relational & Document databases and any other cool web technologies.
     </p>
     <p>
-        edPUG takes place on the <em>third Tuesday</em> of every month, making the next edPUG in {{ edPUG\Helpers\DateHelper::timeUntilNextMeetup() }}.
+        edPUG takes place on the <em>{{ Config::get('edpug.day_repetition') }} {{ Config::get('edpug.day') }}</em> of every month, making the next edPUG in <strong>{{ edPUG\Helpers\DateHelper::timeUntilNextMeetup() }}</strong>.
         It is free to come along, but we issue electronic tickets via Eventbrite to control the capacity of the venue.
         Get your ticket early to avoid disappointment! We&rsquo;ll also email those with a free ticket with a reminder a few days before the event.
     </p>
