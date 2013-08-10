@@ -16,21 +16,19 @@ class EventBriteWrapper {
 			$startDateTime = $meetup->getStartDateTime();
 			$endDateTime = $meetup->getEndDateTime();
 			$description = $meetup->getEventBriteDescription();
-			$title = $meetup->title;
-
-			exit;
+      $title = $meetup->title;
 
 			$newEventParams = array(
-					'title' => 'My test event',
-					'description' => 'testing event creation, remember not to set the privacy or visibility of test events to "public".',
-					'start_date' => date('Y-m-d H:i:s', time() + (7 * 24 * 60 * 60)),
-					'end_date' => date('Y-m-d H:i:s', time() + (7 * 24 * 60 * 60) + (2 * 60 * 60) )
+					'title' => $title,
+					'description' => $description,
+					'start_date' => $startDateTime->format('Y-m-d H:i:s'),
+					'end_date' => $endDateTime->format('Y-m-d H:i:s')
 			);
 
 			try{
 				$response = $this->eventBriteApi->event_new($newEventParams);
 
-				$eventId = $response->process->id;
+        $eventId = $response->process->id;
 
 				$meetup->eventbrite_id = $eventId;
 				$meetup->save();
@@ -46,6 +44,11 @@ class EventBriteWrapper {
     {
 			$this->createNewEvent($meetup);
 			return true;
+    }
+
+    private function sendToEventbrite($meetup, $new)
+    {
+
     }
 
 }

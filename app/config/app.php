@@ -117,9 +117,8 @@ return array(
 		'Bootstrapper\BootstrapperServiceProvider',
 		'Basset\BassetServiceProvider',
 		'edPUG\EventBrite\EventBriteServiceProvider',
-    'Former\FormerServiceProvider',
-    'Way\Generators\GeneratorsServiceProvider',  
-		'edPUG\EventBrite\EventBriteServiceProvider'    
+		'Former\FormerServiceProvider',
+		'Way\Generators\GeneratorsServiceProvider'  
 	),
 
 	/*

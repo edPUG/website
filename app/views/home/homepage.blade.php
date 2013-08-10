@@ -2,6 +2,7 @@
 
 @section('content')
    
+{{ HTML::script('/javascript/edpug.js') }}
 <div id="home">
     <h1>Welcome to <abbr title="Edinburgh PHP User Group">edPUG</abbr> - the Edinburgh PHP User Group</h1>
     <p>
@@ -72,6 +73,28 @@ edPUG goes ahead every month regardless of whether a talk takes place or not, so
     
    
     
+</div>
+
+</div id="contact-us">
+    <h2>Contact us</h2>
+    <p>Use the form below to get in touch with us.</p>
+  
+    {{ Form::open(array('url' => '/contact-form-ajax', 'id' => 'contact-form-ajax')) }}
+    {{ Form::model($contact, array()) }}
+    
+    {{ Form::label('name', 'Your Name:', array('class' => 'name')) }}
+    {{ Form::text('name') }}
+
+    {{ Form::label('email', 'Your Email:', array('class' => 'email')) }}
+    {{ Form::text('email') }}
+    
+    {{ Form::label('message', 'Your Message:', array('class' => 'message')) }}
+    {{ Form::textArea('message') }}
+    <br />
+    {{ Form::submit("Send message", array('id'=>'contact-form-submit')) }}
+    <span id='contact-form-submitting' class='hide'><img src='/images/spinner.gif' /></span>
+    {{ Form::close() }}
+
 </div>
 
 <div id="do-a-talk">
