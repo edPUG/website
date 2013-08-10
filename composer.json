@@ -3,12 +3,11 @@
 	"description": "The Laravel Framework.",
 	"keywords": ["framework", "laravel"],
 	"require": {
-		"laravel/framework": "4.0.*",
-		"frozennode/administrator": "dev-dev",
-		"patricktalmadge/bootstrapper": "dev-develop",
-    "anahkiasen/former": "dev-master"
+    "laravel/framework": "4.0.*",
+    "frozennode/administrator": "dev-dev",
+    "patricktalmadge/bootstrapper": "dev-develop",
+    "anahkiasen/former": "dev-master",
     "way/generators": "dev-master"
->>>>>>> 6eaab50d6d070a0cef4bf5411c40c3f9120658f8
 	},
 	"autoload": {
 		"classmap": [
