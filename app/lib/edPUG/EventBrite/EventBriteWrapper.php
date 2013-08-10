@@ -13,7 +13,7 @@ class EventBriteWrapper {
 
     public function createNewEvent($meetup)
     {
-      return $this->sendToEventbrite($meetup, true);
+      $this->sendToEventbrite($meetup, true);
       $this->createNewTickets($meetup);
     }
     
