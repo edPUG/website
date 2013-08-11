@@ -13,12 +13,27 @@ class Meetup extends Eloquent {
   }
 
 
+  public static function boot() {
+    parent::boot(); 
+
+    static::creating(function($meetup) {
+      if(!$meetup->eventbrite_slug) {
+        $meetup->eventbrite_slug = $meetup->generateEventBriteSlug();
+      }
+    });
+
+  }
+
   public function talks() {
     return $this->hasMany('Talk');
   }
 
   public function videos() {
     return $this->hasMany('Video');
+  }
+
+  public function generateEventBriteSlug() {
+    return 'test-slug';
   }
 
   public function getEventBriteTitle() {

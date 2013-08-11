@@ -80,6 +80,10 @@ return array(
           'title' => 'Eventbrite ID',
           'type'  => 'text'
         ),
+        'eventbrite_slug' => array(
+          'title' => 'Eventbrite Slug',
+          'type'  => 'text'
+        ),
 				'start_date' => array(
 					'title' => 'Start Date',
 					'type' => 'date',

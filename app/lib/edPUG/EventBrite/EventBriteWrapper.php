@@ -13,13 +13,21 @@ class EventBriteWrapper {
 
     public function createNewEvent($meetup)
     {
-      $this->sendToEventbrite($meetup, true);
-      $this->createNewTickets($meetup);
+      if($meetup->active){
+        $this->sendToEventbrite($meetup, true);
+        $this->createNewTickets($meetup);
+      } else {
+        $this->throwNotActiveException();
+      }
     }
     
     public function updateExistingEvent($meetup)
     {
-      return $this->sendToEventbrite($meetup, false);
+      if($meetup->active){
+        return $this->sendToEventbrite($meetup, false);
+      } else {
+        $this->throwNotActiveException();
+      }
     }
 
     public function createNewTickets($meetup)
@@ -47,20 +55,20 @@ class EventBriteWrapper {
 			$description = $meetup->getEventBriteDescription();
       $title = $meetup->getEventBriteTitle();
       $timeZone = date_default_timezone_get();
+      $slug = $meetup->eventbrite_slug;
 
 			$eventParams = array(
-        'title'       => $title,
-        'description' => $description,
-        'start_date'  => $startDateTime->format('Y-m-d H:i:s'),
-        'end_date'    => $endDateTime->format('Y-m-d H:i:s'),
-        'timezone'    => $timeZone
+        'title'             => $title,
+        'description'       => $description,
+        'start_date'        => $startDateTime->format('Y-m-d H:i:s'),
+        'end_date'          => $endDateTime->format('Y-m-d H:i:s'),
+        'timezone'          => $timeZone
       );
 
       if($new) {
         $eventParams['status'] = 'draft';
-      }
-
-      if(!$new) {
+        $eventParams['personalized_url'] = $slug;
+      } else {
         $eventParams['event_id'] = $meetup->eventbrite_id;
       }
 
@@ -76,6 +84,11 @@ class EventBriteWrapper {
       $meetup->save();
 
       return true;
+    }
+
+    private function throwNotActiveException()
+    {
+      throw new \Exception('Meetup is not active');
     }
 
 }
