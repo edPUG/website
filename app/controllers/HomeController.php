@@ -4,7 +4,7 @@ class HomeController extends BaseController {
     public function showHomepage()
     {
         $viewVars = array(
-            'next_meetup' => Meetup::getNextMeetup(),
+            'next_meetup' => Meetup::getNextActiveMeetup(),
             'contact' => new ContactMessage()
         );
     

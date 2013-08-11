@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>edPUG</title>
+    <title>
+	@section('title')
+	edPUG - Edinburgh PHP User Group
+	@show
+	</title>
     {{ Basset::show('bootstrapper.css') }}
     {{ Basset::show('bootstrapper.js') }}
 </head>

@@ -8,6 +8,16 @@
       <li><a href="#find-us">How to find us</a></li>
       <li><a href="#do-a-talk">Want to do a talk?</a></li>
       <li><a href="#past-events">Event archive</a></li>
+      
+	  @if (Auth::check())
+		@if (Auth::user()->is_admin)
+			<li><a href="/admin">Admin</a></li> 
+		@endif
+		<li><a href="{{ action('UserController@logout') }}">Logout</a></li> 
+	  @else
+		<li><a href="{{ action('UserController@login') }}">Login</a></li> 
+	  @endif
+	  
     </ul>
   </div>
 </div>

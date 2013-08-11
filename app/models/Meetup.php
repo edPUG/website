@@ -12,9 +12,10 @@ class Meetup extends Eloquent {
 		'duration_minutes' => 'required|integer'
 	);
 
-	public static function getNextMeetup() {
+	public static function getNextActiveMeetup() {
 
     $meetup = Meetup::whereRaw('TO_DAYS(start_date) - TO_DAYS(NOW()) >= 0')
+	  ->where('active', true)		
       ->orderBy('start_date', 'ASC')
       ->first();
 

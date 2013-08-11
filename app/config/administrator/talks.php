@@ -16,6 +16,7 @@ return array(
 	'columns' => array(
 		'id',
 		'title'      => ['title' => 'Title'],
+		'meetup'     => ['title' => 'Meetup', 'relationship' => 'meetup', 'select' => '(:table).title'],
 		'sort_order' => ['title' => 'Sort Order']
 	),
 	

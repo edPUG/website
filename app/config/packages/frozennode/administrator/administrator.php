@@ -50,8 +50,8 @@ return array(
 	 */
 	'menu' => array(
             'Meetups' => array('meetups', 'talks', 'speakers'),
-            'Contact' => array('contact_messages'),
-			'Users'   => array('users')          
+            'Contact' => 'contact_messages',
+			'Users'   => 'users'       
             ),
 
 	/**
