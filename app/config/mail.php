@@ -27,8 +27,8 @@ return array(
 	| the Postmark mail service, which will provide reliable delivery.
 	|
 	*/
-
-	'host' => 'smtp.mailgun.org',
+        // TODO - set this up using config cascade
+	'host' => 'smtp.tools.sky.com',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -54,7 +54,7 @@ return array(
 	|
 	*/
 
-	'from' => array('address' => null, 'name' => null),
+	'from' => array('address' => 'hello@edpug.co.uk', 'name' => 'edPUG'),
 
 	/*
 	|--------------------------------------------------------------------------
@@ -119,6 +119,6 @@ return array(
 	|
 	*/
 
-	'pretend' => false,
+	'pretend' => true,
 
 );

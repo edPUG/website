@@ -50,8 +50,8 @@ return array(
 	 */
 	'menu' => array(
             'Meetups' => array('meetups', 'talks', 'speakers'),
-            'Contact' => array('contact_messages')
-            
+            'Contact' => array('contact_messages'),
+			'Users'   => array('users')          
             ),
 
 	/**
@@ -61,9 +61,13 @@ return array(
 	 * @type closure
 	 */
 	'permission'=> function()
-	{
-		// return Auth::check();
-    return true;
+	{   
+    
+		if (!Auth::check()) return false;
+		
+		// user musb be logged in and marked as an admin to use the admin area
+		return Auth::user()->is_admin;
+  
 	},
 
 	/**
