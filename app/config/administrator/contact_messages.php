@@ -15,7 +15,7 @@ return array(
 	'columns' => array(
 		'from_name'  => ['title' => 'From Name'],
 		'from_email' => ['title' => 'From Email', 'type' => 'text'],
-		'subject'    => ['title' => 'Subject', 'type' => 'time'],
+		'subject'    => ['title' => 'Subject', 'type' => 'text'],
 		'created_at' => ['title' => 'Sent at', 'type' => 'datetime']		
 	),
 	
@@ -30,7 +30,7 @@ return array(
 	'edit_fields' => array(
 		'from_name'  => ['title' => 'From Name'],
 		'from_email' => ['title' => 'From Email', 'type' => 'text'],
-		'subject'    => ['title' => 'Subject', 'type' => 'time'],
+		'subject'    => ['title' => 'Subject', 'type' => 'text'],
 		'message'    => ['title' => 'Message', 'type' => 'textarea']		
 	),
 	
