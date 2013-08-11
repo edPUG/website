@@ -118,7 +118,8 @@ return array(
 		'Basset\BassetServiceProvider',
 		'edPUG\EventBrite\EventBriteServiceProvider',
 		'Former\FormerServiceProvider',
-		'Way\Generators\GeneratorsServiceProvider'  
+		'Way\Generators\GeneratorsServiceProvider',
+    'Zizaco\Confide\ConfideServiceProvider'
 	),
 
 	/*
@@ -210,7 +211,10 @@ return array(
 		'Typography'     => 'Bootstrapper\\Typography',
 
 		// Basset
-		'Basset' => 'Basset\Facade'
+		'Basset' => 'Basset\Facade',
+            
+                // Confide (Authentication)
+                'Confide' => 'Zizaco\Confide\ConfideFacade'
 
 	),
 

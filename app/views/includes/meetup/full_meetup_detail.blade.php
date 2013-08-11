@@ -15,7 +15,7 @@
               @foreach ($meetup->talks as $talk)
                 <h4>Talk: {{ $talk->title }}</h4>
                 
-                @if ($talk->speakers)
+                @if ($talk->speakers && count($talk->speakers))
                   <p>
                   Speakers:
                   @if ($lastIdx = count($talk->speakers) - 1) @endif

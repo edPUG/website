@@ -2,16 +2,26 @@
 
 class Meetup extends Eloquent {
 
-  public static function getNextMeetup() {
+	/**
+	 * Validation rules
+	 */
+	public static $rules = array(
+		'title'       => 'required',
+		'start_date'  => 'required|date',
+		'start_time'  => 'required',
+		'duration_minutes' => 'required|integer'
+	);
+
+	public static function getNextActiveMeetup() {
 
     $meetup = Meetup::whereRaw('TO_DAYS(start_date) - TO_DAYS(NOW()) >= 0')
+	  ->where('active', true)		
       ->orderBy('start_date', 'ASC')
       ->first();
 
     return $meetup;
 
   }
-
 
   public static function boot() {
     parent::boot(); 
@@ -65,9 +75,9 @@ class Meetup extends Eloquent {
 
   public function getAdminExistsOnEventBriteAttribute() {
     if($this->existsOnEventBrite()) {
-      return 1;
+      return 'Yes';
     } else {
-      return 0;
+      return 'No';
     }
   }
 

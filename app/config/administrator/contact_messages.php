@@ -5,77 +5,42 @@
  */
 
 return array(
-
-	'title' => 'Contact Messages',
-
-	'single' => 'Contact Message',
-
-	'model' => 'ContactMessage',
-
+	'title'      => 'Contact Messages',
+	'single'     => 'Contact Message',
+	'model'      => 'ContactMessage',
+	'form_width' => 600,
 	/**
 	 * The display columns
 	 */
 	'columns' => array(
-		'id',
-		'from_name' => array(
-			'title' => 'From Name',
-
-		),
-		'from_email' => array(
-			'title' => 'From Email',
-                        'type' => 'text',
-		),
-		'subject' => array(
-			'title' => 'Subject',
-                        'type' => 'time',
-		),
-		'created_at' => array(
-			'title' => 'Sent at',
-                        'type' => 'datetime',
-		)
+		'from_name'  => ['title' => 'From Name'],
+		'from_email' => ['title' => 'From Email', 'type' => 'text'],
+		'subject'    => ['title' => 'Subject', 'type' => 'time'],
+		'created_at' => ['title' => 'Sent at', 'type' => 'datetime']		
 	),
-
+	
+	/**
+	 * Sorting
+	 */
+	'sort' => ['field' => 'created_at', 'direction' => 'desc'],
+		
 	/**
 	 * The editable fields
 	 */
 	'edit_fields' => array(
-		'from_name' => array(
-			'title' => 'From Name',
-                        'type'  => 'text'
-
-		),
-		'from_email' => array(
-			'title' => 'From Email',
-                        'type' => 'text',
-		),
-		'subject' => array(
-			'title' => 'Subject',
-                        'type' => 'text',
-		),
-		'message' => array(
-			'title' => 'Message',
-                        'type' => 'textarea',
-		),
-            		
+		'from_name'  => ['title' => 'From Name'],
+		'from_email' => ['title' => 'From Email', 'type' => 'text'],
+		'subject'    => ['title' => 'Subject', 'type' => 'time'],
+		'message'    => ['title' => 'Message', 'type' => 'textarea']		
 	),
-    'filters' => array(
-        'from_name' => array(
-			'title' => 'From Name',
-                        'type'  => 'text'
-
-		),
-		'from_email' => array(
-			'title' => 'From Email',
-                        'type' => 'text',
-		),
-		'subject' => array(
-			'title' => 'Subject',
-                        'type' => 'text',
-		),
-		'message' => array(
-			'title' => 'Message',
-                        'type' => 'text',
-		)
-    )
-
+	
+	/**
+	 * The filters
+	 */
+	'filters' => array(
+		'from_name'  => ['title' => 'From Name'],
+		'from_email' => ['title' => 'From Email', 'type' => 'text'],
+		'subject'    => ['title' => 'Subject', 'type' => 'time'],
+		'message'    => ['title' => 'Message', 'type' => 'textarea']		
+	)
 );

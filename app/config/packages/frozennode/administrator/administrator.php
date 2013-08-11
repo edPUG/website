@@ -50,8 +50,8 @@ return array(
 	 */
 	'menu' => array(
             'Meetups' => array('meetups', 'talks', 'speakers'),
-            'Contact' => array('contact_messages')
-            
+            'Contact' => 'contact_messages',
+			'Users'   => 'users'       
             ),
 
 	/**
@@ -61,9 +61,13 @@ return array(
 	 * @type closure
 	 */
 	'permission'=> function()
-	{
-		// return Auth::check();
-    return true;
+	{   
+    
+		if (!Auth::check()) return false;
+		
+		// user musb be logged in and marked as an admin to use the admin area
+		return Auth::user()->is_admin;
+  
 	},
 
 	/**
@@ -100,7 +104,7 @@ return array(
 	 *
 	 * @type string
 	 */
-	'logout_path' => false,
+	'logout_path' => 'user/logout',
 
 	/**
 	 * This is the key of the return path that is sent with the redirection to your login_action. Input::get('redirect') will hold the return URL.

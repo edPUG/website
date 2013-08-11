@@ -24,12 +24,12 @@ class DateHelper {
 
   public static function calculateDateTimeUtilNextMeetup()
   {
-    $nextMeetup = \Meetup::getNextMeetup();
+    $nextMeetup = \Meetup::getNextActiveMeetup();
     $now = new \DateTime();
     $currentMonth = date('F');
 
     if($nextMeetup) {
-      $nextMeetupDateTime = \Meetup::getNextMeetup()->getStartDateTime();
+      $nextMeetupDateTime = $nextMeetup->getStartDateTime();
     } else {
       $defaultStartDay    = \Config::get('edpug.day');
       $defaultStartTime   = \Config::get('edpug.time');
