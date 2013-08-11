@@ -32,4 +32,12 @@ return array(
 		'email'    => ['title' => 'Email Address'],
 		'is_admin' => ['title' => 'edPUG Admin?', 'type' => 'bool'],  		
 	),
+	
+	/**
+	 * The filters
+	 */
+	'filters' => array(
+		'username' => ['title' => 'Username'],
+		'email'    => ['title' => 'Email Address']
+	),
 );
