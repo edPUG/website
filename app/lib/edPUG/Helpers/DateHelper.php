@@ -6,20 +6,33 @@ class DateHelper {
 
   public static function timeUntilNextMeetup()
   {
-
-    $nextMeetupDateTime = self::calculateDateTimeUtilNextMeetup();
-
-    $now = new \DateTime();
-    $difference = $nextMeetupDateTime->diff($now);
-
-    $timeRemaining = $difference->format('%a days');
+    $difference = self::calculateDifference();
 
     if($difference->format('%a') <= 1){
       $timeRemaining = $difference->format('%h hours, %i minutes');
+    } else {
+
+      $difference = self::calculateDifference(true);   
+      $timeRemaining = $difference->format('%a days');
     }
 
     return $timeRemaining;
     
+  }
+
+  private static function calculateDifference($daysOnly = false)
+  {
+    $nextMeetupDateTime = self::calculateDateTimeUtilNextMeetup();
+    $now = new \DateTime();
+
+    if($daysOnly){
+      $nextMeetupDateTime->setTime(0, 0);
+      $now->setTime(0, 0);
+    }
+
+    $difference = $nextMeetupDateTime->diff($now);
+
+    return $difference;
   }
 
   public static function calculateDateTimeUtilNextMeetup()
