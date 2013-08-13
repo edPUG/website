@@ -119,7 +119,7 @@ return array(
 		'edPUG\EventBrite\EventBriteServiceProvider',
 		'Former\FormerServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
-    'Zizaco\Confide\ConfideServiceProvider'
+		'Zizaco\Confide\ConfideServiceProvider'
 	),
 
 	/*

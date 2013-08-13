@@ -1,5 +1,4 @@
-@extends('layouts.master')
-
+@extends('layouts.master_mastheadless')
 @section('title')
 Forgot Password? | @parent
 @stop
