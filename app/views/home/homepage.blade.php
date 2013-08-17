@@ -2,8 +2,6 @@
 
 @section('content')
 
-{{ HTML::script('/javascript/edpug.js') }}
-
 <section class="content-row white">
       <div class="container">
         <div class="row">

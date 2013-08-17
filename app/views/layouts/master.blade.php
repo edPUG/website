@@ -17,9 +17,9 @@
     <![endif]-->
     
     <!-- The styles -->
-    <link href="/css/bootstrap.css" rel="stylesheet">
-    <link href="/css/style.css" rel="stylesheet">
-    
+    @stylesheets('bootstrapper')
+    @stylesheets('application')
+
     @if (0)
     <!-- The fav and touch icons -->
     <link rel="shortcut icon" href="/img/favicon.ico">
@@ -41,11 +41,9 @@
     @yield('content')
    
     @include('includes.footer')
-    
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
-    <script src="/js/waypoints.min.js"></script>
-    <script src="/js/scripts.js"></script>
+
+    @javascripts('bootstrapper')
+    @javascripts('application')
 
   </body>
 </html>
