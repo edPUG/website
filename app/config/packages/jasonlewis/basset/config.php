@@ -45,10 +45,8 @@ return array(
 
             $directory = $collection->directory('assets/javascripts', function($collection)
               {
-                $collection->javascript('jquery.min.js');
-                $collection->javascript('bootstrap.min.js');
                 $collection->javascript('waypoints.min.js');
-                $collection->javascript('konami.js');
+                $collection->javascript('jquery.konami.js');
                 $collection->javascript('scripts.js');
                 $collection->requireDirectory('coffeescripts')->apply('CoffeeScript');
               });

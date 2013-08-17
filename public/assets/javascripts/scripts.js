@@ -4,5 +4,4 @@
         return -$(this).height();
       }
 
-      handlet
   });
