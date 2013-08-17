@@ -43,7 +43,7 @@ class Meetup extends Eloquent {
   }
 
   public function generateEventBriteSlug() {
-    return 'test-slug';
+    return strtolower('edpug-'.date('y').'-'.date('M'));
   }
 
   public function getEventBriteTitle() {
