@@ -46,6 +46,16 @@ class EventBriteWrapper {
 
       return true;
     }
+
+    private function getFromEventbrite($meetup)
+    {
+      $existingEventParams = $this->eventBriteApi->event_get(['id' => $meetup->eventbrite_id]);
+      if(property_exists($existingEventParams, 'error')) {
+        $this->throwEventBriteException($existingEventParams->error);
+      } else {
+        return $existingEventParams;
+      }
+    }
     
 
     private function sendToEventbrite($meetup, $new)
@@ -65,10 +75,18 @@ class EventBriteWrapper {
         'timezone'          => $timeZone
       );
 
-      if($new) {
+      if ($new) {
         $eventParams['status'] = 'draft';
         $eventParams['personalized_url'] = $slug;
       } else {
+        $currentEventParams = $this->getFromEventbrite($meetup);
+        $currentEventBriteSlug = $this->getSlugFromUrl($currentEventParams);
+        if (!$currentEventBriteSlug) {
+          $eventParams['personalized_url'] = $slug;
+        } elseif($currentEventBriteSlug != $slug) {
+          $eventParams['personalized_url'] = $slug;
+        }
+
         $eventParams['event_id'] = $meetup->eventbrite_id;
       }
 
@@ -86,9 +104,31 @@ class EventBriteWrapper {
       return true;
     }
 
+    private function getSlugFromUrl($currentEventParams)
+    {
+      $url = $currentEventParams->event->url;
+      $host = parse_url($url, PHP_URL_HOST);
+      $hostParts = explode('.', $host);
+
+      if($hostParts[0] == 'www'){
+        return false;
+      } else {
+        return $hostParts[0];
+      }
+    }
+
     private function throwNotActiveException()
     {
       throw new \Exception('Meetup is not active');
+    }
+
+    private function throwEventBriteException($error = null)
+    {
+      if($error){
+        throw new \Exception($error);
+      } else {
+        throw new \Exception('Eventbrite error');
+      }
     }
 
 }
