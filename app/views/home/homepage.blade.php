@@ -92,7 +92,7 @@
                 </p>
               </div>
               <div class="span6">
-                <p>One you find the venue, you&rsquo;ll be greeted with a friendly hello and the offer of a beer or soft drink. Once we&rsquo;ve established numbers
+                <p>Once you find the venue, you&rsquo;ll be greeted with a friendly hello and the offer of a beer or soft drink. When we&rsquo;ve established numbers
                     on the night (there&rsquo;s always a few latecomers!), we&rsquo;ll make an order for food, which usually involves the famous <abbr title="Peppers Ham Pepperoni">PHP</abbr>izza&trade;!</p>
 
                 <p>While we wait for everyone to arrive, there&rsquo;s often a bit of Table Tennis to be played, or the Epic Fail compilation of the month to be watched on YouTube&trade;.
