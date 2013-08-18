@@ -37,19 +37,17 @@ return array(
 		'forename' => ['title' => 'Forename', 'type' => 'text'],
 		'surname'  => ['title' => 'Surname', 'type' => 'text'],
 		'bio'      => ['title' => 'Bio', 'type' => 'wysiwyg'],
-//		'image'    => array(
-//			'title'      => 'Image',
-//			'type'       => 'image',
-//			'location'   => public_path() . '/uploads/speakers/originals/',
-//			'naming'     => 'keep',
-//			'length'     => 20,
-//			'size_limit' => 2, // MB
-//			'sizes' => array(
-//				[65, 57, 'crop', public_path() . '/uploads/speakers/thumbs/small/', 100],
-//				[220, 138, 'landscape', public_path() . '/uploads/speakers/thumbs/medium/', 100],
-//				[383, 276, 'fit', public_path() . '/uploads/speakers/thumbs/full/', 100]
-//			)
-//		)
+		'image'    => array(
+			'title'      => 'Image',
+			'type'       => 'image',
+			'location'   => public_path() . '/uploads/speakers/',
+			'naming'     => 'keep',
+			'length'     => 20,
+			'size_limit' => 2, // MB
+			'sizes' => array(
+				[104, 104, 'crop', public_path() . '/uploads/speakers/thumbs/', 100],				
+			)
+		)
 	),
 	
 	/**

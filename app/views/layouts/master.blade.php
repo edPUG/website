@@ -1,4 +1,3 @@
-@if (1)
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,7 +7,7 @@
 	  edPUG - Edinburgh PHP User Group
 	  @show
     </title>
-    <meta name="description" content="edPUG, The Edinburgh PHP User group meets every 3rd Tuesday of the month for talks, videos and general discussion on all things web related and beyond. We get new members every month, so if you've not been before, what's stopping you? See you soon! edPUG">
+    <meta name="description" content="edPUG, The Edinburgh PHP User group meets every 3rd Tuesday of the month for talks, videos and general discussion on all things web related and beyond. new members arrive all the time, so if you've not been before, what's stopping you? See you soon! edPUG">
     <meta name="author" content="edPUG">
 
     <!-- The HTML5 shim, for IE6-8 support of HTML elements -->
@@ -17,9 +16,9 @@
     <![endif]-->
     
     <!-- The styles -->
-    @stylesheets('bootstrapper')
     @stylesheets('application')
-
+	@javascripts('application')
+	
     @if (0)
     <!-- The fav and touch icons -->
     <link rel="shortcut icon" href="/img/favicon.ico">
@@ -35,36 +34,13 @@
   @include('includes.header')
    
     @section('masthead')
-    <section class="masthead-wrapper"></section>
+    <section class="masthead-wrapper" id="home"></section>
     @show
     
     @yield('content')
    
     @include('includes.footer')
 
-    @javascripts('bootstrapper')
-    @javascripts('application')
-
   </body>
 </html>
-@else
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>
-	@section('title')
-	edPUG - Edinburgh PHP User Group
-	@show
-	</title>
-    {{ Basset::show('bootstrapper.css') }}
-    {{ Basset::show('bootstrapper.js') }}
-</head>
-<body data-spy="scroll" data-target=".navbar" style="padding-top:40px;">
-      
-    @yield('content')
-    
-    @include('includes.footer')
-</body>
-</html>
-@endif
+

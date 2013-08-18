@@ -45,10 +45,15 @@ return array(
 
             $directory = $collection->directory('assets/javascripts', function($collection)
               {
+                $collection->javascript('jquery.min.js');
+                $collection->javascript('bootstrap.min.js');
                 $collection->javascript('waypoints.min.js');
-                $collection->javascript('jquery.konami.js');
-                $collection->javascript('scripts.js');
-                $collection->requireDirectory('coffeescripts')->apply('CoffeeScript');
+                $collection->javascript('selectivizr.min.js');
+                $collection->javascript('modernizr.min.js');
+                $collection->javascript('https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false');
+				$collection->javascript('map.init.js');
+				$collection->javascript('scripts.js');
+                // $collection->requireDirectory('coffeescripts')->apply('CoffeeScript');
               });
             
             $directory->apply('JsMin');
