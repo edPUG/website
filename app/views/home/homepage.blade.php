@@ -147,21 +147,27 @@
                 <p>The office is a 15 minute walk from <a target="_blank" href="http://www.networkrail.co.uk/edinburgh-waverley-station/departures-arrivals/">Edinburgh Waverley train station</a>. We recommend you leave the station via the <a target="_blank" href="http://goo.gl/maps/rfEmM">Calton Road exit.</a></p>
               </div>
               <div class="offset1 span6" id="contact-us">
-                {{ Form::open(array('url' => '/contact-form-ajax', 'id' => 'contact-form-ajax')) }}
-                {{ Form::model($contact, array()) }}
-
-                {{ Form::label('name', 'Your Name:', array('class' => 'name')) }}
-                {{ Form::text('name') }}
-
-                {{ Form::label('email', 'Your Email:', array('class' => 'email')) }}
-                {{ Form::text('email') }}
-
-                {{ Form::label('message', 'Your Message:', array('class' => 'message')) }}
-                {{ Form::textArea('message') }}
+                
+				{{ Former::vertical_open()
+				  ->id('contact-form-ajax')
+				  ->data_action(URL::route('contact-form-endpoint'))
+				  ->style('display: none;')
+				  ->action(URL::route('dev_null'))
+				  }}
+                
+				{{ Former::text('name')->required()->label('Your Name:')->value('testing') }}
+                {{ Former::email('email')->required()->label('Your Email Address:')->value('test@here.com') }}
+                {{ Former::textarea('message')->required()->label('Your Message:')->rows(5)->value('My test') }}             
                 <br />
-                {{ Form::submit("Send message", array('id'=>'contact-form-submit')) }}
-                <span id='contact-form-submitting' class='hide'><img src='/assets/img/spinner.gif' /></span>
-                {{ Form::close() }}
+                {{ Form::submit('Send message', array('id' => 'contact-form-submit')) }}
+                <span id="contact-form-submitting" class="hide"><img style="padding-left: 15px;" src="/assets/img/spinners/squares-circle.gif" alt="Loading..." /></span>
+                {{ Former::close() }}
+				
+				<div id="contact-form-success" class="alert alert-success" style="display:none">					
+				</div>
+				
+				<p class="requires-javascript">JavaScript is required to use the Contact Form.</p>
+				
               </div>
             </div>
           </div>
