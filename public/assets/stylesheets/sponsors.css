@@ -1,0 +1,21 @@
+footer {
+	position: relative;
+}
+
+footer p.line-logo {
+	width: 72px;
+	height: 22px;
+	position: absolute;
+	bottom: 27px;
+	right: 30px;
+}
+
+footer p.line-logo a {
+width: 72px;
+height: 22px;
+display: block;
+outline: 0;
+text-indent: -5000px;
+font-size: 1px;
+background: transparent url(/assets/img/sponsors/line-logo.png) 0 -57px no-repeat;
+}
