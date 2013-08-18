@@ -1,18 +1,22 @@
 <div class="span6">
 	
-	<h4>When? {{ $meetup->long_start_date_time }} </h4>
+	<h4 itemprop="startDate" content="{{ $meetup->schema_start_date_time }}">When? {{ $meetup->long_start_date_time }} </h4>
 	@if ($meetup->description)
 		{{ $meetup->description }}
 	@endif
 
 	<h4>Where?</h4>
 	
-	<address>
-		Line Digital Ltd.<br />
-		77 Brunswick Street<br />
-		Edinburgh<br />
-		EH7 5HS<br />
-		<a href="http://www.line.uk.com" target="_blank">line.uk.com</a>
+  <address itemprop="location" itemscope itemtype="http://schema.org/Place">
+    <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+      <span itemprop="streetAddress">
+        Line Digital Ltd.<br />
+        77 Brunswick Street<br />
+      </span>
+      <span itemprop="addressLocality">Edinburgh<br /></span>
+      <span itemprop="postalCode">EH7 5HS<br /></span>
+    </div>
+		<a itemprop="url" href="http://www.line.uk.com" target="_blank">line.uk.com</a>
 	</address>
 	
 	<p>See the <a href="{{ URL::route('home') }}#contact">Find us</a> section below for more information on getting to the venue.</p>
