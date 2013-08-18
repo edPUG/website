@@ -58,10 +58,6 @@ class Meetup extends Eloquent {
     return $this->getStartDateTime()->format('D jS F Y g:ia');
   }
 
-  public function getSchemaStartDateTimeAttribute() {
-    return $this->getStartDateTime()->format(DateTime::ISO8601);
-  }
-
   public function getStartDateTime() {
     $startDateTime = new \DateTime($this->start_date . ' ' . $this->start_time);
     return $startDateTime;
