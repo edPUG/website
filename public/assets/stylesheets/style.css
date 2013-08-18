@@ -469,6 +469,16 @@ Google maps
     height: 100%;
 }
 
+/* Fixes issue with Google Maps and Bootstrap */
+
+#map-canvas img { 
+  max-width: none;
+}
+
+#map-canvas label { 
+  width: auto; display:inline; 
+} 
+
 /*---------------------------------------------------------
 
 Forms
