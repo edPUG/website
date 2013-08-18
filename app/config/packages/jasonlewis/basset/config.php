@@ -51,8 +51,10 @@ return array(
                 $collection->javascript('selectivizr.min.js');
                 $collection->javascript('modernizr.min.js');
                 $collection->javascript('https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false');
-				$collection->javascript('map.init.js');
-				$collection->javascript('scripts.js');
+                $collection->javascript('map.init.js');
+                $collection->javascript('scripts.js');
+                $collection->javascript('jquery.konami.js');
+                $collection->javascript('edthepug.js');
                 // $collection->requireDirectory('coffeescripts')->apply('CoffeeScript');
               });
             
