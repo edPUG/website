@@ -147,7 +147,7 @@
                 <p>The office is a 15 minute walk from <a target="_blank" href="http://www.networkrail.co.uk/edinburgh-waverley-station/departures-arrivals/">Edinburgh Waverley train station</a>. We recommend you leave the station via the <a target="_blank" href="http://goo.gl/maps/rfEmM">Calton Road exit.</a></p>
               </div>
               <div class="offset1 span6" id="contact-us">
-                
+                				  
 				{{ Former::vertical_open()
 				  ->id('contact-form-ajax')
 				  ->data_action(URL::route('contact-form-endpoint'))
@@ -155,9 +155,9 @@
 				  ->action(URL::route('dev_null'))
 				  }}
                 
-				{{ Former::text('name')->required()->label('Your Name:')->value('testing') }}
-                {{ Former::email('email')->required()->label('Your Email Address:')->value('test@here.com') }}
-                {{ Former::textarea('message')->required()->label('Your Message:')->rows(5)->value('My test') }}             
+				{{ Former::text('name')->required()->label('Your Name:')->value(App::environment() != 'prod' ? 'Test Person' : '') }}
+                {{ Former::email('email')->required()->label('Your Email Address:')->value(App::environment() != 'prod' ? 'test@here.com' : '') }}
+                {{ Former::textarea('message')->required()->label('Your Message:')->rows(5)->value(App::environment() != 'prod' ? 'My test message' : '') }}             
                 <br />
                 {{ Form::submit('Send message', array('id' => 'contact-form-submit')) }}
                 <span id="contact-form-submitting" class="hide"><img style="padding-left: 15px;" src="/assets/img/spinners/squares-circle.gif" alt="Loading..." /></span>
@@ -178,7 +178,6 @@
 	<section class="map-row">
 		<div id="map-canvas"></div>
 	</section>
-
 
     @if (0)
     <div id="do-a-talk">
