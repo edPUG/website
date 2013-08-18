@@ -28,9 +28,11 @@ return array(
 	 * The editable fields
 	 */
 	'edit_fields' => array(
-		'username' => ['title' => 'Username'],
-		'email'    => ['title' => 'Email Address'],
-		'is_admin' => ['title' => 'edPUG Admin?', 'type' => 'bool'],  		
+		'username'              => ['title' => 'Username'],
+		'email'                 => ['title' => 'Email Address'],
+		'password'              => ['title' => 'Password'],
+		'password_confirmation' => ['title' => 'Confirm Password'],
+		'is_admin'              => ['title' => 'edPUG Admin?', 'type' => 'bool'],  		
 	),
 	
 	/**

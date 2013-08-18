@@ -15,7 +15,7 @@ return array(
 	|
 	*/
 
-	'driver' => 'smtp',
+	'driver' => 'mail',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -28,7 +28,7 @@ return array(
 	|
 	*/
         // TODO - set this up using config cascade
-	'host' => 'smtp.tools.sky.com',
+	'host' => 'localhost',
 
 	/*
 	|--------------------------------------------------------------------------
@@ -42,7 +42,6 @@ return array(
 	*/
 
 	'port' => 587,
-
 	/*
 	|--------------------------------------------------------------------------
 	| Global "From" Address
@@ -119,6 +118,6 @@ return array(
 	|
 	*/
 
-	'pretend' => true,
+	'pretend' => false,
 
 );
