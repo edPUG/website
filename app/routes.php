@@ -16,8 +16,10 @@ Route::post(
         'as' => 'contact-form-endpoint', 
         'uses' => 'HomeController@contactFormEndpoint'
     )
-);// Confide routes
+);
+Route::any('/dev/null', array('as' => 'dev_null', function() {  return 'Computer says no!';  }));
 
+// Confide routes
 Route::get( 'user/create',                 'UserController@create');
 Route::post('user',                        'UserController@store');
 Route::get( 'user/login',                  'UserController@login');

@@ -212,9 +212,12 @@ return array(
 
 		// Basset
 		'Basset' => 'Basset\Facade',
-            
-                // Confide (Authentication)
-                'Confide' => 'Zizaco\Confide\ConfideFacade'
+        
+		// Former
+		'Former' => 'Former\Facades\Former',
+		
+		// Confide (Authentication)
+		'Confide' => 'Zizaco\Confide\ConfideFacade'
 
 	),
 

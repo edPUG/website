@@ -8,10 +8,57 @@ $(document).ready(function(){
 		bottom,
 		win;
 
-		smoothScroll();
-		scrollFade();
+	$('.requires-javascript').hide();
+
+	smoothScroll();
+	scrollFade();
+	initContactForm();
 
 });
+
+function initContactForm() {
+	
+	var $form = $('#contact-form-ajax');
+	$form.show();
+	
+	$form.submit(function(event) {
+		
+		// show spinner
+		var $spinner       = $('#contact-form-submitting');
+		var $submit_button = $('button[type=submit]', $form);
+		var $success_div   = $('#contact-form-success');
+		
+		$spinner.removeClass('hide');
+		$submit_button.attr('disabled','disabled');
+		$success_div.hide();
+		
+		event.preventDefault();
+		
+		var submit_url = $form.data('action');
+		
+		var posting = $.post(submit_url, $form.serializeArray() );
+		
+		/* Put the results in a div */
+		posting.done(function(data) {
+			
+			$success_div.html(data.message);
+			$success_div.show();
+			
+		});
+		
+		posting.fail(function(data) {
+			alert('There was an error submitting the form, please try again');
+		});
+		
+		posting.always(function(data) {
+			$spinner.addClass('hide');
+			$submit_button.removeAttr('disabled');
+		});
+				 
+	} );
+		
+	
+}
 
 //smooth scrolling
 function smoothScroll() {
