@@ -2,12 +2,14 @@
 
 @section('content')
 
-<section class="content-row white">
+<section class="content-row white" id="welcome">
       <div class="container">
         <div class="row">
           <div class="span12">
-            <h1>Welcome to <abbr title="Edinburgh PHP User Group">edPUG</abbr></h1>
-            <h2>The Edinburgh PHP User Group</h2>
+            <hgroup>
+				<h1>Welcome to <abbr title="Edinburgh PHP User Group">edPUG</abbr></h1>
+				<h2>The Edinburgh PHP User Group</h2>
+			</hgroup>
             <div class="row">
               <div class="span6">
                 <p>
@@ -23,7 +25,7 @@
                 </p>
                 
                 @if ($next_meetup)
-                  <a class="btn" href="http://edpug.eventbrite.co.uk">Book your ticket</a>
+                  <a class="btn book-btn" href="http://edpug.eventbrite.co.uk">Get your free ticket now!</a>
                 @endif
                 
               </div>
@@ -33,21 +35,26 @@
       </div>
     </section>
 
-    <section class="content-row yellow" id="next-meetup">
+    <section class="content-row yellow" id="meetup">
       <div class="container">
         <div class="row">
           <div class="span12">
-            <h2 style="opacity: 0">The next <abbr title="Edinburgh PHP User Group">edPUG</abbr> meetup</h2>
-            <h3>Join us every month for our PHP User Group</h3>
-            
-            <div class="row">
-              <div class="icon-row">
-                <img class="icon clock" src="" alt="" />
-                <img class="icon calendar" src="" alt="" />
-                <img class="icon building" src="" alt="" />
+			<hgroup>
+            <h2>The next <abbr title="Edinburgh PHP User Group">edPUG</abbr> meetup</h2>
+            @if ($next_meetup)
+				<h3>{{ $next_meetup->title }}</h3>
+			@else
+				<h3>Join us every month for our PHP User Group</h3>
+			@endif
+            </hgroup>
+             <div class="row">
+              <div class="iconrow meetup-header">
+                <div class="clock-wrapper">
+					<div class="clock">7 - 9pm</div>
+					<div class="clock-arm"></div>
+				</div>
               </div>
-            </div>
-            
+            </div>  
             <div class="row">
               @if ($next_meetup)
     
@@ -73,38 +80,44 @@
       </div>
     </section>
 
-    <section class="content-row blue" id="what-to-expect">
-      <div class="container">
-        <div class="row">
-          <div class="span12">
-            <h2>What to expect?</h2>
-            <h3>Famous PHPizza, beer and great chat</h3>
-             <div class="row">
-              <div class="span6">
-                <p>First and foremost, expect a friendly, informal and relaxed atmosphere. We have new members every few months,
-                    so don&rsquo;t be afraid to come along on your own &ndash; our current members (edPUGGERs!) were all <abbr title="Edinburgh PHP User Group">edPUG</abbr> newbies once! Why not bring along a friend if it&rsquo;s your first time? The more the merrier!</p>
+	<section class="content-row blue" id="expect">
+		<div class="container">
+			<div class="row">
+				<div class="span12">
+					<hgroup>
+						<h2>What to expect?</h2>
+						<h3>Famous PHPizza, beer and great chat</h3>
+					</hgroup>
+					<div class="row">
+						<div class="span6">
+							<p>First and foremost, expect a friendly, informal and relaxed atmosphere. We have new members every few months,
+								so don&rsquo;t be afraid to come along on your own &ndash; our current members (edPUGGERs!) were all <abbr title="Edinburgh PHP User Group">edPUG</abbr> newbies once! Why not bring along a friend if it&rsquo;s your first time? The more the merrier!</p>
 
-                <p>Everyone is welcome, from people who just want to find out more about PHP; to students considering a career in web development; bedroom programmers wanting to meet like minded people;
-                    to people who make a living writing PHP on a daily basis, either freelance or for one of the many excellent digital agencies in Edinburgh and beyond.
-                    People from all ages and skill levels come along, the only requirement is an interest in <strong>&lt;?php ?&gt;</strong>
-                </p>
-              </div>
-              <div class="span6">
-                <p>Once you find the venue, you&rsquo;ll be greeted with a friendly hello and the offer of a beer or soft drink. When we&rsquo;ve established numbers
-                    on the night (there&rsquo;s always a few latecomers!), we&rsquo;ll make an order for food, which usually involves the famous <abbr title="Peppers Ham Pepperoni">PHP</abbr>izza&trade;!</p>
+							<p>Everyone is welcome, from people who just want to find out more about PHP; to students considering a career in web development; bedroom programmers wanting to meet like minded people;
+								to people who make a living writing PHP on a daily basis, either freelance or for one of the many excellent digital agencies in Edinburgh and beyond.
+								People from all ages and skill levels come along, the only requirement is an interest in <strong>&lt;?php ?&gt;</strong>
+							</p>
+						</div>
+						<div class="span6">
+							<p>Once you find the venue, you&rsquo;ll be greeted with a friendly hello and the offer of a beer or soft drink. When we&rsquo;ve established numbers
+								on the night (there&rsquo;s always a few latecomers!), we&rsquo;ll make an order for food, which usually involves the famous <abbr title="Peppers Ham Pepperoni">PHP</abbr>izza&trade;!</p>
 
-                <p>While we wait for everyone to arrive, there&rsquo;s often a bit of Table Tennis to be played, or the Epic Fail compilation of the month to be watched on YouTube&trade;.
-                    Often people will talk about new things they&rsquo;ve seen, and bring them up on the big screen.
-                </p>
-               
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+							<p>While we wait for everyone to arrive, there&rsquo;s often a bit of Table Tennis to be played, or the Epic Fail compilation of the month to be watched on YouTube&trade;.
+								Often people will talk about new things they&rsquo;ve seen, and bring them up on the big screen.
+							</p>
 
-    <section class="content-row white" id="find-us">
+							@if ($next_meetup)
+							<a class="btn book-btn" href="http://edpug.eventbrite.co.uk">Get your free ticket now!</a>
+							@endif
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+    <section class="content-row white" id="contact">
       <div class="container">
         <div class="row">
           <div class="span12">
@@ -119,14 +132,19 @@
             </div>
             <div class="row">
               <div class="span5">
-                <h4>When and where = find us</h4>
-                <p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante</p>
-                <h4>When and where = find us</h4>
-                <p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante</p>
-                <h4>When and where = find us</h4>
-                <p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante</p>
-                <h4>When and where = find us</h4>
-                <p>Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante</p>
+                <h4>The venue</h4>
+				<address>
+					<a target="_blank" href="https://maps.google.co.uk/maps?q=line+digital,+77+brunswick+street&hl=en&ll=55.96036,-3.179963&spn=0.009597,0.01929&sll=55.960408,-3.180327&sspn=0.009597,0.01929&hq=line+digital,&hnear=77+Brunswick+St,+Edinburgh+EH7+5HS,+United+Kingdom&t=m&z=16&iwloc=A"><a target="_blank" href="https://maps.google.co.uk/maps?q=line+digital,+77+brunswick+street&hl=en&ll=55.96036,-3.179963&spn=0.009597,0.01929&sll=55.960408,-3.180327&sspn=0.009597,0.01929&hq=line+digital,&hnear=77+Brunswick+St,+Edinburgh+EH7+5HS,+United+Kingdom&t=m&z=16&iwloc=A">Line Digital Ltd.</a><br />
+					77 Brunswick Street, Edinburgh, EH7 5HS<br />
+					<a href="http://www.line.uk.com" target="_blank">line.uk.com</a>
+				</address>
+                <p>We are hidden down an alleyway on Brunswick Street. The blue door in this <a target="_blank" href="http://goo.gl/maps/kk2WJ">Google &quot;Street View&quot;</a> link is the secret to finding <abbr title="Edinburgh PHP User Group">edPUG</abbr>. Once you find the door, ring the buzzer.</p>
+                <h4>By foot</h4>
+                <p>From Leith Walk, find <a target="_blank" href="http://goo.gl/maps/4MVOR">Vittoria's</a>. We are just a few doors down from there. From London Road there are many streets to take, so best point the GPS on your mobile phone to <a target="_blank" href="https://maps.google.co.uk/maps?q=line+digital,+77+brunswick+street&hl=en&ll=55.96036,-3.179963&spn=0.009597,0.01929&sll=55.960408,-3.180327&sspn=0.009597,0.01929&hq=line+digital,&hnear=77+Brunswick+St,+Edinburgh+EH7+5HS,+United+Kingdom&t=m&z=16&iwloc=A">the office address.</a></p>
+                <h4>By bus</h4>
+                <p>There are many bus services to Easter Road and London road, so we recommend the <a href="http://lothianbuses.com/plan-a-journey/journey-planner">Lothian Buses</a> journey planner to find a bus from your part of town.</p>
+                <h4>By train</h4>
+                <p>The office is a 15 minute walk from <a target="_blank" href="http://www.networkrail.co.uk/edinburgh-waverley-station/departures-arrivals/">Edinburgh Waverley train station</a>. We recommend you leave the station via the <a target="_blank" href="http://goo.gl/maps/rfEmM">Calton Road exit.</a></p>
               </div>
               <div class="offset1 span6" id="contact-us">
                 {{ Form::open(array('url' => '/contact-form-ajax', 'id' => 'contact-form-ajax')) }}
@@ -142,7 +160,7 @@
                 {{ Form::textArea('message') }}
                 <br />
                 {{ Form::submit("Send message", array('id'=>'contact-form-submit')) }}
-                <span id='contact-form-submitting' class='hide'><img src='/images/spinner.gif' /></span>
+                <span id='contact-form-submitting' class='hide'><img src='/assets/img/spinner.gif' /></span>
                 {{ Form::close() }}
               </div>
             </div>
@@ -151,9 +169,10 @@
       </div>
     </section>
 
-    <section class="map-row">
-      map goes here
-    </section>
+	<section class="map-row">
+		<div id="map-canvas"></div>
+	</section>
+
 
     @if (0)
     <div id="do-a-talk">

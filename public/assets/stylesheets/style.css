@@ -13,14 +13,31 @@ h1, h2, h3 {
 	text-align: center;
 }
 
-h1 {
+h1, #meetup h2, #expect h2 {
 	font-size: 2.500em;
 	font-family: 'proxima_novasemibold', sans-serif;
 }
 
-h2 {
+h2, h3 {
 	font-size: 2.222em;
 	font-family: 'proxima_novalight', sans-serif;
+}
+h4 {
+    font-size: 1.222em;
+    font-family: 'proxima_novasemibold', sans-serif;
+    margin-bottom: 20px;
+
+}
+h5 {
+    font-size: 1em;
+    font-family: 'proxima_novasemibold', sans-serif;
+}
+hgroup {
+    margin-bottom: 40px;
+}
+
+p {
+    line-height: 1.4em;
 }
 
 .content-row {
@@ -33,7 +50,7 @@ h2 {
 }
 
 .yellow {
-	background-color: #F1B809;
+	background-color: #e0a801;
 	color: #fff;
 }
 
@@ -55,6 +72,13 @@ h2 {
 .btn:active {
 	color: #fff;
 	background-color: #0b63a2;
+}
+.book-btn {
+    margin-top: 15px;
+}
+.iconrow {
+    margin-bottom: 50px;
+    text-align: center;
 }
 
 /*-------------------------------------------------------
@@ -271,14 +295,15 @@ header .navbar-inner {
 	box-shadow: none;
 	background-color: #131426;
 }
-header.navbar .brand {
+header.navbar .brand,
+footer .brand p  {
 	color: #fff;
 	margin-top: 20px;
 	text-shadow: none;
 	font-size: 2.1em;
 	font-family: 'proxima_nova_rgbold', sans-serif;
 }
-header.navbar .brand span {
+header.navbar .brand span{
 	color: #F1B809;
 }
 header.navbar .nav > li > a {
@@ -300,6 +325,15 @@ header.navbar .nav {
 	top: 25px;
 }
 
+header.navbar .nav > li.facebook {
+    width: 30px;
+    height:30px;
+    display: block;
+    text-indent: -9999px;
+    margin-top: 4px;
+    background: url("/assets/img/site/icons/facebook.png") no-repeat 0px 0px;
+}
+
 /*-------------------------------------------------------
 
 Masthead
@@ -307,7 +341,7 @@ Masthead
 --------------------------------------------------------*/
 .masthead-wrapper {
 	margin-top: 70px;
-	background: url("../img/site/headers/masthead.jpg") repeat-x center top;
+	background: url("/assets/img/site/headers/masthead.jpg") repeat-x center top;
 	height:520px;
 	display: block;
 }
@@ -317,12 +351,146 @@ Masthead
 Content rows
 
 --------------------------------------------------------*/
+.content-row  {
+    min-height: 300px;
+}
+
+#meetup .row > div h4:nth-child(2n) {
+    margin-top: 40px;
+}
+
+#speaker {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    display: block;
+    margin-bottom: 20px;
+    overflow: hidden;
+}
+
+#speaker > img {
+    float: left;
+    border: 3px solid #fff;
+    margin-right: 20px;
+}
+
+#expect .btn {
+    background-color: #fff;
+    color: #1c84ce;
+}
+#expect .btn:hover {
+    background-color: #e0a801;
+    color: #666;
+}
+
+#meetup > div, #expect > div {
+    opacity: 0;
+}
+
+
+#meetup .iconrow {
+    position: relative;
+    background: url("/assets/img/site/headers/meetup-header.png") no-repeat top center;
+    height: 189px;
+}
+#meetup .iconrow .clock-wrapper {
+    position: relative;
+    width: 182px;
+    height: 182px;
+    left: 71px;
+    top: 6px;
+}
+#meetup .iconrow .clock {
+    margin: 0px;
+    background: url("/assets/img/site/animated/clock/clock.jpg") no-repeat 0px 0px;
+    display: block;
+    text-indent: -9999px;
+    width: 182px;
+    height: 182px;
+}
+#meetup .iconrow .clock-arm {
+    background: url("/assets/img/site/animated/clock/clock_arm.png") no-repeat 0px 0px;
+    position: absolute;
+    left: 47.5%;
+    height: 53px;
+    width: 14px;    
+    margin-left: -1px;
+    top: 40px;
+}
+
+#meetup .iconrow .clock-arm.animate {
+    -webkit-animation: rotate 1s 1s linear;
+    -webkit-transform-origin: center bottom;
+    -moz-animation: rotate 1s 1s linear;
+    -moz-transform-origin: center bottom;
+    -ms-animation: rotate 1s 1s linear;
+    -ms-transform-origin: center bottom;
+    -o-animation: rotate 1s 1s linear;
+    -o-transform-origin: center bottom;
+    animation: rotate 1s 1s linear;
+    transform-origin: center bottom;
+}
+
+
+@-webkit-keyframes rotate {
+    0% { -webkit-transform: rotate(0deg);}
+    100% { -webkit-transform: rotate(360deg);}
+}   
+
+@-moz-keyframes rotate {
+    0% { -moz-transform: rotate(0deg);}
+    100% { -moz-transform: rotate(360deg);}
+}   
+
+@-ms-keyframes rotate {
+    0% { -ms-transform: rotate(0deg);}
+    100% { -ms-transform: rotate(360deg);}
+}   
+
+@-o-keyframes rotate {
+    0% { -o-transform: rotate(0deg);}
+    100% { -o-transform: rotate(360deg);}
+}   
+
+@keyframes rotate {
+    0% { transform: rotate(0deg);}
+    100% { transform: rotate(360deg);}
+}   
+
+
+/*---------------------------------------------------------
+
+Google maps
+
+---------------------------------------------------------*/
+#map-canvas {
+    width: 100%;
+    min-height: 400px;
+    height: 100%;
+}
 
 /*---------------------------------------------------------
 
 Forms
 
 ----------------------------------------------------------*/
+form label {
+    font-size: 1em;
+    font-family: 'proxima_novasemibold', sans-serif;
+    margin-bottom: 10px;
+}
+form label > span {
+    font-size: 1.667em;
+    color: #1c84ce;
+}
+input[type=text],
+input[type=email],
+textarea {
+    min-height: 45px;
+    padding: 10px;
+    border: 1px solid #1c84ce;
+    margin-bottom: 25px;
+}
 
 /*---------------------------------------------------------
 
@@ -335,6 +503,10 @@ footer {
 	min-height: 200px;
 	color: #fff;
 	padding: 40px 0px;
+}
+footer .brand p {
+    font-size: 1.889em;
+    color: #5f6067;
 }
 
 /*---------------------------------------------------------

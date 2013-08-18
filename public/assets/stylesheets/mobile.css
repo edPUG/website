@@ -1,0 +1,46 @@
+@media screen and (max-width: 996px) {
+	body {
+		padding: 0;
+	}
+	.navbar-fixed-top {
+		margin: 0px;
+		position: relative;
+	}
+	.navbar .btn-navbar {
+		background-color: #1c84ce;
+		background-image: none;
+		margin: 15px 15px 0px 0px;
+	}
+	header.navbar .nav {
+		top: 10px;
+	}
+	.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
+		box-shadow: none;
+	}
+	header.navbar .nav > li.facebook,
+	#meetup .iconrow .clock-wrapper {
+		display: none;
+	}
+	.masthead-wrapper {
+		margin-top: 0px;
+		height: 200px;
+		background-size: auto 200px;
+	}
+	.content-row, footer {
+		padding: 30px 20px;
+	}
+	.book-btn, form .btn {
+		width: 100%;
+		box-sizing: border-box;
+	}
+	#meetup > div, #expect > div {
+	    opacity: 1;
+	}
+	#meetup .iconrow {
+		background-size: contain;
+		height: auto;
+		min-height: 95px;
+	}
+
+
+}
