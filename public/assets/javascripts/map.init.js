@@ -7,12 +7,14 @@
   var trainStation = new google.maps.LatLng(55.95151, -3.19177);
   var map;
   var officeMarker;
+  var startMaker;
+  var endMarker;
 
   function initialize() {
     directionsDisplay = new google.maps.DirectionsRenderer({suppressMarkers: true});
     var mapOptions = {
       scrollwheel: false,
-      zoom: 17,
+      zoom: 15,
       center: lineOffice,
       disableDefaultUI: true,
       mapTypeId: google.maps.MapTypeId.ROADMAP
@@ -71,6 +73,12 @@
 
     $('.map-update').click(function(e) {
       officeMarker.setMap(null);
+      if(startMarker != 'undefined'){
+        startMarker.setMap(null);
+      }
+      if(endMarker != 'undefined'){
+        endMarker.setMap(null);
+      }
       e.preventDefault();
     });
 
