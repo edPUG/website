@@ -122,7 +122,7 @@
         <div class="row">
           <div class="span12">
             <h2>Find us</h2>
-            <h3>By plane, train or automobile</h3>
+            <h3>By <a href="#" class="map-update" id="plane-map">plane</a>, <a href="#" class="map-update" id="train-map">train</a> or automobile</h3>
              <div class="row">
               <div class="icon-row">
                 <img class="icon clock" src="" alt="" />

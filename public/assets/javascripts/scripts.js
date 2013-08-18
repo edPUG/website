@@ -64,28 +64,29 @@ function initContactForm() {
 function smoothScroll() {
 
 	$('.nav a, a.brand').click(function(){
+    scroll($.attr(this, 'href'));
+		return false;
+	});
+}
+
+function scroll(href) {
 
 		navHeight = $('header').height();
-
-		
 
 		//check if on mobile and adjust offset of scroll
 		if (Modernizr.mq('only screen and (min-width: 970px)')) {
 
 			$('html, body').animate({		  
-				scrollTop: $( $.attr(this, 'href') ).offset().top - navHeight
+				scrollTop: $( href ).offset().top - navHeight
 			}, 500);
 
 		} else {
 
 			$('html, body').animate({
-			    scrollTop: $( $.attr(this, 'href') ).offset().top
+			    scrollTop: $( href ).offset().top
 			}, 500);
 
 		}
-
-		return false;
-	});
 }
 
 //fade in elements as they come into view
