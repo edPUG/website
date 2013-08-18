@@ -38,11 +38,11 @@
     <section class="content-row yellow" id="meetup">
       <div class="container">
         <div class="row">
-          <div class="span12">
+          <div itemscope itemtype="http://schema.org/Event" class="span12">
 			<hgroup>
             <h2>The next <abbr title="Edinburgh PHP User Group">edPUG</abbr> meetup</h2>
             @if ($next_meetup)
-				<h3>{{ $next_meetup->title }}</h3>
+				<h3 itemprop="name">{{ $next_meetup->title }}</h3>
 			@else
 				<h3>Join us every month for our PHP User Group</h3>
 			@endif
