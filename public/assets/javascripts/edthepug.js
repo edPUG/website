@@ -3,7 +3,7 @@
   $(document).ready(function() {
     return $(window).konami({
       cheat: function() {
-        return $("body").append('<img id="ed-the-pug" src="/assets/img/pug.jpg" />');
+        return $("body").append('<img id="ed-the-pug" src="/assets/img/ed-the-pug.png" />');
       }
     });
   });
