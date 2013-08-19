@@ -17,7 +17,7 @@ Vicky Sinclair: www.vickysinclair.com
 
 ----------------------------------------
 
-UP UP DOWN DOWN LEFT RIGHT LEFT RIGHT A B 
+UP UP DOWN DOWN LEFT RIGHT LEFT RIGHT B A 
 
 ----------------------------------------
 
