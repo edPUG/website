@@ -3,13 +3,11 @@
 class HomeController extends BaseController {
     
 	public function showHomepage()
-    {
-        $viewVars = array(
-            'next_meetup' => Meetup::getNextActiveMeetup(),
-            'contact' => new ContactMessage()
-        );
-    
-        return View::make('home/homepage', $viewVars);
+	{
+		return View::make('home/homepage')
+			->with('next_meetup', Meetup::getNextActiveMeetup())
+			->with('contact', new ContactMessage())
+		;
     }
        
     /**
@@ -20,7 +18,7 @@ class HomeController extends BaseController {
     public function contactFormEndpoint()
 	{
 		
-//		sleep(2); // enable to test the spinner :o)
+		sleep(2); // make the user think the site is working hard to send their message :o)
 		
         $newContact = new ContactMessage();
 		
@@ -53,7 +51,7 @@ class HomeController extends BaseController {
 			
 		});
 		}
-			
+
 		return Response::json(
             array(
                 'status'  => 200, 

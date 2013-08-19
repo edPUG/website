@@ -54,6 +54,7 @@ return array(
                 $collection->javascript('map.init.js');
                 $collection->javascript('scripts.js');
                 $collection->javascript('jquery.konami.js');
+                $collection->javascript('magnific-popup.min.js');
                 $collection->javascript('edthepug.js');
                 // $collection->requireDirectory('coffeescripts')->apply('CoffeeScript');
               });

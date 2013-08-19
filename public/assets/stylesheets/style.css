@@ -81,6 +81,10 @@ p {
     text-align: center;
 }
 
+abbr.subtle[title],
+abbr.subtle[data-original-title] {
+  border-bottom: none;
+}
 /*-------------------------------------------------------
 
 Fonts

@@ -7,7 +7,7 @@
         <div class="row">
           <div class="span12">
             <hgroup>
-				<h1>Welcome to <abbr title="Edinburgh PHP User Group">edPUG</abbr></h1>
+				<h1>Welcome to <abbr title="Edinburgh PHP User Group" class="subtle">edPUG</abbr></h1>
 				<h2>The Edinburgh PHP User Group</h2>
 			</hgroup>
             <div class="row">
@@ -40,7 +40,7 @@
         <div class="row">
           <div itemscope itemtype="http://schema.org/Event" class="span12">
 			<hgroup>
-            <h2>The next <abbr title="Edinburgh PHP User Group">edPUG</abbr> meetup</h2>
+            <h2>The next <abbr title="Edinburgh PHP User Group" class="subtle">edPUG</abbr> meetup</h2>
             @if ($next_meetup)
 				<h3 itemprop="name">{{ $next_meetup->title }}</h3>
 			@else
@@ -134,17 +134,17 @@
               <div class="span5">
                 <h4>The venue</h4>
 				<address>
-					<a target="_blank" href="https://maps.google.co.uk/maps?q=line+digital,+77+brunswick+street&hl=en&ll=55.96036,-3.179963&spn=0.009597,0.01929&sll=55.960408,-3.180327&sspn=0.009597,0.01929&hq=line+digital,&hnear=77+Brunswick+St,+Edinburgh+EH7+5HS,+United+Kingdom&t=m&z=16&iwloc=A"><a target="_blank" href="https://maps.google.co.uk/maps?q=line+digital,+77+brunswick+street&hl=en&ll=55.96036,-3.179963&spn=0.009597,0.01929&sll=55.960408,-3.180327&sspn=0.009597,0.01929&hq=line+digital,&hnear=77+Brunswick+St,+Edinburgh+EH7+5HS,+United+Kingdom&t=m&z=16&iwloc=A">Line Digital Ltd.</a><br />
+					<a class="popup-gmaps" href="https://maps.google.co.uk/maps?q=line+digital,+77+brunswick+street&hl=en&ll=55.96036,-3.179963&spn=0.009597,0.01929&sll=55.960408,-3.180327&sspn=0.009597,0.01929&hq=line+digital,&hnear=77+Brunswick+St,+Edinburgh+EH7+5HS,+United+Kingdom&t=m&z=16&iwloc=A">Line Digital Ltd.</a><br />
 					77 Brunswick Street, Edinburgh, EH7 5HS<br />
 					<a href="http://www.line.uk.com" target="_blank">line.uk.com</a>
 				</address>
-                <p>We are hidden down an alleyway on Brunswick Street. The blue door in this <a target="_blank" href="http://goo.gl/maps/kk2WJ">Google &quot;Street View&quot;</a> link is the secret to finding <abbr title="Edinburgh PHP User Group">edPUG</abbr>. Once you find the door, ring the buzzer.</p>
+                <p>We are hidden down an alleyway on Brunswick Street. The blue door in this <a class="popup-gmaps" href="http://goo.gl/maps/kk2WJ">Google &quot;Street View&quot;</a> link is the secret to finding <abbr title="Edinburgh PHP User Group">edPUG</abbr>. Once you find the door, ring the buzzer.</p>
                 <h4>By foot</h4>
-                <p>From Leith Walk, find <a target="_blank" href="http://goo.gl/maps/4MVOR">Vittoria's</a>. We are just a few doors down from there. From London Road there are many streets to take, so best point the GPS on your mobile phone to <a target="_blank" href="https://maps.google.co.uk/maps?q=line+digital,+77+brunswick+street&hl=en&ll=55.96036,-3.179963&spn=0.009597,0.01929&sll=55.960408,-3.180327&sspn=0.009597,0.01929&hq=line+digital,&hnear=77+Brunswick+St,+Edinburgh+EH7+5HS,+United+Kingdom&t=m&z=16&iwloc=A">the office address.</a></p>
+                <p>From Leith Walk, find <a class="popup-gmaps" href="http://goo.gl/maps/4MVOR">Vittoria's</a>. We are just a few doors down from there. From London Road there are many streets to take, so best point the GPS on your mobile phone to <a class="popup-gmaps" href="https://maps.google.co.uk/maps?q=line+digital,+77+brunswick+street&hl=en&ll=55.96036,-3.179963&spn=0.009597,0.01929&sll=55.960408,-3.180327&sspn=0.009597,0.01929&hq=line+digital,&hnear=77+Brunswick+St,+Edinburgh+EH7+5HS,+United+Kingdom&t=m&z=16&iwloc=A">the office address.</a></p>
                 <h4>By bus</h4>
                 <p>There are many bus services to Easter Road and London road, so we recommend the <a href="http://lothianbuses.com/plan-a-journey/journey-planner">Lothian Buses</a> journey planner to find a bus from your part of town.</p>
                 <h4>By train</h4>
-                <p>The office is a 15 minute walk from <a target="_blank" href="http://www.networkrail.co.uk/edinburgh-waverley-station/departures-arrivals/">Edinburgh Waverley train station</a>. We recommend you leave the station via the <a target="_blank" href="http://goo.gl/maps/rfEmM">Calton Road exit.</a></p>
+                <p>The office is a 15 minute walk from <a href="http://www.networkrail.co.uk/edinburgh-waverley-station/departures-arrivals/">Edinburgh Waverley train station</a>. We recommend you leave the station via the <a class="popup-gmaps" href="http://goo.gl/maps/rfEmM">Calton Road exit.</a></p>
               </div>
               <div class="offset1 span6" id="contact-us">
                 				  

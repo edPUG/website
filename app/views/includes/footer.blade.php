@@ -7,9 +7,14 @@
 			<p class="line-logo"><a href="http://www.line.uk.com/">Sponsored by Line</a></p>
 			
           </div>
-        <div class="span2 offset5">
+        <div class="span4 offset3">
+			<p>Useful links</p>
 			<ul>
-				<li><a href="http://edpug.eventbrite.com">EventBrite</li>
+				<li><a target="_blank" href="http://edpug.eventbrite.com">edPUG on EventBrite</li>
+				<li><a target="_blank" href="https://www.facebook.com/groups/50315848110/">edPUG Facebook Group</li>
+				<li><a target="_blank" href="https://github.com/edPUG/website">edPUG GitHub Repository</li>
+				<li><a target="_blank" href="http://opentechcalendar.co.uk/">Open Tech Calendar</li>
+				<li><a target="_blank" href="http://php.net/">php.net</li>
 			</ul>
         </div>
       </div>
