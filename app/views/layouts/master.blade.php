@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+
+@include('includes.ascii')
+
     <meta charset="utf-8">
     <title>
     @section('title')
