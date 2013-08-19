@@ -11,7 +11,7 @@
 Thanks to:
 Ally Burns: about.me/allyburns
 Jamie Robertson
-Phil Brooks
+Phil Brookes 
 Stephen Heron: www.stephenheron.co.uk
 Vicky Sinclair: www.vickysinclair.com
 
