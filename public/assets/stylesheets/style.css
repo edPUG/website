@@ -64,7 +64,7 @@ p {
 	font-size: 1.222em;
 	font-family: 'proxima_novasemibold', sans-serif;
 	text-transform: uppercase;
-	padding: 20px;
+	padding: 24px 20px 20px;
 	border-radius: 3px;
 }
 .btn:hover,
@@ -85,6 +85,7 @@ abbr.subtle[title],
 abbr.subtle[data-original-title] {
   border-bottom: none;
 }
+
 /*-------------------------------------------------------
 
 Fonts
@@ -283,6 +284,31 @@ Fonts
 
 }
 
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    @font-face {
+        font-family: 'proxima_nova_rgbold';
+        src: url('../fonts/proximanova-bold-webfont.svg#proxima_nova_rgbold') format('svg');
+        font-weight: normal;
+        font-style: normal;
+
+    }
+
+    @font-face {
+        font-family: 'proxima_novasemibold';
+        src: url('../fonts/proximanova-semibold-webfont.svg#proxima_novasemibold') format('svg');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    @font-face {
+    font-family: 'proxima_novalight';
+    src: url('../fonts/proximanova-light-webfont.svg#proxima_novalight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+}
+
 /*-------------------------------------------------------
 
 Header
@@ -319,12 +345,21 @@ header.navbar .nav > li > a {
 }
 header.navbar .nav > .active > a, 
 header.navbar .nav > li > a:hover,
+header.navbar .nav > li > a:focus,
 header.navbar .nav > .active > a:hover, 
 header.navbar .nav > .active > a:focus {
 	color: #F1B809;
 	backgound-color: transparent;
 	background: none;
+    outline: none;
 }
+
+header .navbar-inner,
+.navbar-fixed-top .navbar-inner {
+    filter: none;
+    border: 0px;
+}
+
 header.navbar .nav {
 	top: 25px;
 }
@@ -335,7 +370,7 @@ header.navbar .nav > li.facebook {
     display: block;
     text-indent: -9999px;
     margin-top: 4px;
-    background: url("/assets/img/site/icons/facebook.png") no-repeat 0px 0px;
+    background: url("../img/site/icons/facebook.png") no-repeat 0px 0px;
 }
 
 /*-------------------------------------------------------
@@ -345,7 +380,7 @@ Masthead
 --------------------------------------------------------*/
 .masthead-wrapper {
 	margin-top: 70px;
-	background: url("/assets/img/site/headers/masthead.jpg") repeat-x center top;
+	background: url("../img/site/headers/masthead.jpg") repeat-x center top;
 	height:520px;
 	display: block;
 }
@@ -394,7 +429,7 @@ Content rows
 
 #meetup .iconrow {
     position: relative;
-    background: url("/assets/img/site/headers/meetup-header.png") no-repeat top center;
+    background: url("../img/site/headers/meetup-header.png") no-repeat top center;
     height: 189px;
 }
 #meetup .iconrow .clock-wrapper {
@@ -406,14 +441,14 @@ Content rows
 }
 #meetup .iconrow .clock {
     margin: 0px;
-    background: url("/assets/img/site/animated/clock/clock.jpg") no-repeat 0px 0px;
+    background: url("../img/site/animated/clock/clock.jpg") no-repeat 0px 0px;
     display: block;
     text-indent: -9999px;
     width: 182px;
     height: 182px;
 }
 #meetup .iconrow .clock-arm {
-    background: url("/assets/img/site/animated/clock/clock_arm.png") no-repeat 0px 0px;
+    background: url("../img/site/animated/clock/clock_arm.png") no-repeat 0px 0px;
     position: absolute;
     left: 47.5%;
     height: 53px;
@@ -461,6 +496,13 @@ Content rows
     100% { transform: rotate(360deg);}
 }   
 
+#contact h4 {
+	margin-bottom: 10px;
+}
+
+#contact p {
+	margin-bottom: 20px;
+}
 
 /*---------------------------------------------------------
 
@@ -469,7 +511,7 @@ Google maps
 ---------------------------------------------------------*/
 #map-canvas {
     width: 100%;
-    min-height: 400px;
+    min-height: 300px;
     height: 100%;
 }
 

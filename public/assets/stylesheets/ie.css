@@ -1,0 +1,14 @@
+#meetup .iconrow .clock-wrapper {
+	display: none;
+}
+
+input[type=text] {
+	*min-height: 20px;
+}
+.btn {
+	*padding-top: 20px;
+}
+button.btn {
+	*padding-top: 10px;
+	*padding-bottom: 12px;
+}

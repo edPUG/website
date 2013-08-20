@@ -23,7 +23,7 @@
 
 </div>
 
-<div class="span6">
+<div class="span6 month-speaker">
 
 	@if ($meetup->talks && count($meetup->talks))
 

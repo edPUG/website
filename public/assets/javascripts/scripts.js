@@ -76,6 +76,10 @@ function scroll(href) {
 
 		navHeight = $('header').height();
 
+		if($('html').hasClass('ie-sucks')) {
+			navHeight = navHeight + 100;
+		}
+
 		//check if on mobile and adjust offset of scroll
 		if (Modernizr.mq('only screen and (min-width: 970px)')) {
 
@@ -185,6 +189,5 @@ function initExtraGaTracking() {
 		var link_parts = $(this).attr('href').split('#');
 		ga('send', 'pageview', '/home/' + link_parts[1]);	
 	});
-	
-}
 
+}

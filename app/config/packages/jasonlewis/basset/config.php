@@ -34,10 +34,13 @@ return array(
             // These directories both have a filter applied to them so that the built
             // collection will contain valid CSS.
             $directory = $collection->directory('assets/stylesheets', function($collection)
-            {
+            { 
                 $collection->requireDirectory('less')->apply('Less');
                 $collection->requireDirectory('sass')->apply('Sass');
-                $collection->requireDirectory();
+                $collection->stylesheet('bootstrap.css');
+                $collection->stylesheet('style.css');
+                $collection->stylesheet('mobile.css');
+                $collection->stylesheet('magnific-popup.css');
             });
 
             $directory->apply('CssMin');

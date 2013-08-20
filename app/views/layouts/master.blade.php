@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--[if IE 7]> <html class="ie-sucks"> <![endif]-->
+<!--[if IE 8]> <html class="ie-sucks"> <![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+
   <head>
 
 @include('includes.ascii')
@@ -16,12 +19,13 @@
     <!-- The HTML5 shim, for IE6-8 support of HTML elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <script src="/assets/stylesheets/ie.css"></script>
+    
     <![endif]-->
     
     <!-- The styles -->
     @stylesheets('application')
-	@javascripts('application')
-	
+
     @if (0)
     <!-- The fav and touch icons -->
     <link rel="shortcut icon" href="/img/favicon.ico">
@@ -43,7 +47,8 @@
     @yield('content')
    
     @include('includes.footer')
-
+    @javascripts('application')
+    
   </body>
 </html>
 

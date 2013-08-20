@@ -64,10 +64,12 @@
   $(document).ready(function() {
 
     $("#plane-map").click(function(e) {
+      e.preventDefault();
       directions(edinburghAirport, '/assets/img/site/map/airport.png');
     });
     
     $("#train-map").click(function(e) {
+      e.preventDefault();
       directions(trainStation, '/assets/img/site/map/train.png');
     });
 

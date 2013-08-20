@@ -1,6 +1,10 @@
 @media screen and (max-width: 996px) {
+
 	body {
 		padding: 0;
+	}
+	header.navbar .brand, footer .brand p {
+		margin-top: 12px;
 	}
 	.navbar-fixed-top {
 		margin: 0px;
@@ -11,11 +15,20 @@
 		background-image: none;
 		margin: 15px 15px 0px 0px;
 	}
+	.nav-collapse .nav > li {
+		border-bottom: 1px solid #242650;
+	}
+	.nav-collapse .nav > li:last-child {
+		border-bottom: 0px;
+	}	
 	header.navbar .nav {
 		top: 10px;
 	}
 	.navbar .nav > .active > a, .navbar .nav > .active > a:hover, .navbar .nav > .active > a:focus {
 		box-shadow: none;
+	}
+	.nav-collapse .nav > li > a, .nav-collapse .dropdown-menu a {
+		padding: 12px 15px 10px;
 	}
 	header.navbar .nav > li.facebook,
 	#meetup .iconrow .clock-wrapper {
@@ -42,5 +55,28 @@
 		min-height: 95px;
 	}
 
+	.month-speaker {
+		margin-top: 40px;
+	}
+
+	.navbar .btn-navbar:hover, 
+	.navbar .btn-navbar:focus, 
+	.navbar .btn-navbar:active, 
+	.navbar .btn-navbar.active, 
+	.navbar .btn-navbar.disabled, 
+	.navbar .btn-navbar[disabled] {
+		background-color: #F1B809;
+	}
+
+}
+
+@media screen and (max-width: 700px) {
+	h1, #meetup h2, #expect h2 {
+		font-size: 2em;
+	}
+
+	h2, h3 {
+		font-size: 1.7em;
+	}
 
 }
