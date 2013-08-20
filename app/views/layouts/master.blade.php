@@ -13,6 +13,7 @@
 	  edPUG - Edinburgh PHP User Group
 	  @show
     </title>
+    <meta name="viewport" content="width=device-width">
     <meta name="description" content="edPUG, The Edinburgh PHP User group meets every 3rd Tuesday of the month for talks, videos and general discussion on all things web related and beyond. new members arrive all the time, so if you've not been before, what's stopping you? See you soon! edPUG">
     <meta name="author" content="edPUG">
 
