@@ -123,13 +123,7 @@
           <div class="span12">
             <h2>Find us</h2>
             <h3>By <a href="#" class="map-update" id="plane-map">plane</a>, <a href="#" class="map-update" id="train-map">train</a> or automobile</h3>
-             <div class="row">
-              <div class="icon-row">
-                <img class="icon clock" src="" alt="" />
-                <img class="icon calendar" src="" alt="" />
-                <img class="icon building" src="" alt="" />
-              </div>
-            </div>
+            
             <div class="row">
               <div class="span5">
                 <h4>The venue</h4>
