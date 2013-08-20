@@ -10,11 +10,11 @@
         <div class="span4 offset3">
 			<p>Useful links</p>
 			<ul>
-				<li><a target="_blank" href="http://edpug.eventbrite.com">edPUG on EventBrite</li>
-				<li><a target="_blank" href="https://www.facebook.com/groups/50315848110/">edPUG Facebook Group</li>
-				<li><a target="_blank" href="https://github.com/edPUG/website">edPUG GitHub Repository</li>
-				<li><a target="_blank" href="http://opentechcalendar.co.uk/">Open Tech Calendar</li>
-				<li><a target="_blank" href="http://php.net/">php.net</li>
+				<li><a target="_blank" href="http://edpug.eventbrite.com">edPUG on EventBrite</a></li>
+				<li><a target="_blank" href="https://www.facebook.com/groups/50315848110/">edPUG Facebook Group</a></li>
+				<li><a target="_blank" href="https://github.com/edPUG/website">edPUG GitHub Repository</a></li>
+				<li><a target="_blank" href="http://opentechcalendar.co.uk/">Open Tech Calendar</a></li>
+				<li><a target="_blank" href="http://php.net/">php.net</a></li>
 			</ul>
         </div>
       </div>
