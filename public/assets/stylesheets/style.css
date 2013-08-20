@@ -7,6 +7,11 @@ Generic
 body {
 	font-size: 18px;
 	font-family: 'proxima_nova_rgregular', sans-serif;
+	font-weight: normal;
+}
+
+h1, h2, h3, h4 {
+	font-weight: normal;
 }
 
 h1, h2, h3 {
