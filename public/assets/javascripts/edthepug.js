@@ -3,6 +3,7 @@
   $(document).ready(function() {
     return $(window).konami({
       cheat: function() {
+        ga('send', 'event', 'Konami Code', 'activated');
         return $("body").append('<img id="ed-the-pug" src="/assets/img/ed-the-pug.png" />');
       }
     });
