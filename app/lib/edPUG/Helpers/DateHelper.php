@@ -38,27 +38,37 @@ class DateHelper {
   {
     $nextMeetup = \Meetup::getNextActiveMeetup();
     $now = new \DateTime();
-    $currentMonth = date('F');
 
     if($nextMeetup) {
       $nextMeetupDateTime = $nextMeetup->getStartDateTime();
-    } else {
-      $defaultStartDay    = \Config::get('edpug.day');
-      $defaultStartTime   = \Config::get('edpug.time');
-      $defaultRepetition  = \Config::get('edpug.day_repetition');
-
-      $defaultStartDateTime = new \DateTime($defaultRepetition. ' '. $defaultStartDay .' of '. $currentMonth);
-      $defaultStartDateTime = new \DateTime($defaultStartDateTime->format('Y-m-d'). ' '. $defaultStartTime);
-
-      if($now > $defaultStartDateTime){
-        $month = date('F', strtotime('+1 months'));
-      } else {
-        $month = date('F');
+      if($nextMeetup->getStartDateTime() < $now){
+        $nextMeetupDateTime = self::getStaticNextMeetup();  
       }
-
-      $nextMeetupDateTime = new \DateTime($defaultRepetition. ' '. $defaultStartDay .' of '. $month);
+    } else {
+      $nextMeetupDateTime = self::getStaticNextMeetup();  
     }
 
+    return $nextMeetupDateTime;
+  }
+
+  private static function getStaticNextMeetup()
+  {
+    $defaultStartDay    = \Config::get('edpug.day');
+    $defaultStartTime   = \Config::get('edpug.time');
+    $defaultRepetition  = \Config::get('edpug.day_repetition');
+    $currentMonth = date('F');
+    $now = new \DateTime();
+
+    $defaultStartDateTime = new \DateTime($defaultRepetition. ' '. $defaultStartDay .' of '. $currentMonth);
+    $defaultStartDateTime = new \DateTime($defaultStartDateTime->format('Y-m-d'). ' '. $defaultStartTime);
+
+    if($now > $defaultStartDateTime){
+      $month = date('F', strtotime('+1 months'));
+    } else {
+      $month = date('F');
+    }
+
+    $nextMeetupDateTime = new \DateTime($defaultRepetition. ' '. $defaultStartDay .' of '. $month);
     return $nextMeetupDateTime;
   }
 
