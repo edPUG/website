@@ -2,7 +2,7 @@
 
   var directionsDisplay;
   var directionsService = new google.maps.DirectionsService();
-  var lineOffice = new google.maps.LatLng(55.960276,-3.180374);
+  var officeLatLng = new google.maps.LatLng(55.977013,-3.173105);
   var edinburghAirport = new google.maps.LatLng(55.9500, -3.3725);
   var trainStation = new google.maps.LatLng(55.95151, -3.19177);
   var map;
@@ -15,7 +15,7 @@
     var mapOptions = {
       scrollwheel: false,
       zoom: 15,
-      center: lineOffice,
+      center: officeLatLng,
       disableDefaultUI: true,
       mapTypeId: google.maps.MapTypeId.ROADMAP
     }
@@ -24,7 +24,7 @@
     directionsDisplay.setMap(map);
 
     var image = '/assets/img/site/map/marker.png';
-    var office = lineOffice
+    var office = officeLatLng
     officeMarker = new google.maps.Marker({
         position: office,
         map: map,
@@ -36,7 +36,7 @@
 
     var request = {
       origin:origin,
-      destination:lineOffice,
+      destination:officeLatLng,
       travelMode: google.maps.DirectionsTravelMode.DRIVING
     };
 
