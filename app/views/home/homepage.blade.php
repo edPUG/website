@@ -102,7 +102,7 @@
 							<p>Once you find the venue, you&rsquo;ll be greeted with a friendly hello and the offer of a beer or soft drink. When we&rsquo;ve established numbers
 								on the night (there&rsquo;s always a few latecomers!), we&rsquo;ll make an order for food, which usually involves the famous <abbr title="Peppers Ham Pepperoni">PHP</abbr>izza&trade;!</p>
 
-							<p>While we wait for everyone to arrive, there&rsquo;s often a bit of Table Tennis to be played, or the Epic Fail compilation of the month to be watched on YouTube&trade;.
+							<p>While we wait for everyone to arrive, there&rsquo;s often a bit of chat, or the Epic Fail compilation of the month to be watched on YouTube&trade;.
 								Often people will talk about new things they&rsquo;ve seen, and bring them up on the big screen.
 							</p>
 
@@ -128,17 +128,26 @@
               <div class="span5">
                 <h4>The venue</h4>
                 <address>
-                  <a class="popup-gmaps" href="https://maps.google.co.uk/maps?q=line+digital,+77+brunswick+street&hl=en&ll=55.96036,-3.179963&spn=0.009597,0.01929&sll=55.960408,-3.180327&sspn=0.009597,0.01929&hq=line+digital,&hnear=77+Brunswick+St,+Edinburgh+EH7+5HS,+United+Kingdom&t=m&z=16&iwloc=A">Line Digital Ltd.</a><br />
-                  77 Brunswick Street, Edinburgh, EH7 5HS<br />
-                  <a href="http://www.line.uk.com" target="_blank">line.uk.com</a>
+                  <a target="_blank" href="https://www.google.co.uk/maps/place/Blonde+Digital/@55.977244,-3.173203,17z/data=!3m1!4b1!4m2!3m1!1s0x4887b80420069c0f:0x3e1e3ea5cc7b7db0">Blonde Digital Ltd.</a><br />
+                  86 Commercial Quay <br /> Edinburgh <br />EH6 6LX<br />
+                  <a href="http://www.blonde.net/" target="_blank">blonde.net</a>
                 </address>
-                <p>We are hidden down an alleyway on Brunswick Street. The blue door in this <a class="popup-gmaps" href="http://goo.gl/maps/kk2WJ">Google &quot;Street View&quot;</a> link is the secret to finding <abbr title="Edinburgh PHP User Group">edPUG</abbr>. Once you find the door, ring the buzzer.</p>
+
+                <p>We are tucked away on Commercial Quay, the cobbled area at the back of Commercial Street, overlooking the Scottish Govenment Building.
+                We are next to the Bond No 9 pub. If you are on Commercial Street looking at Bonde No 9 you are on the wrong side of the building (Sneak through the pub to the back!)</p>
+
+                <p>Take a look at this <a target="_blank" href="https://www.google.co.uk/maps/place/Commercial+Quay/@55.977202,-3.172609,3a,90y,199h,90t/data=!3m4!1e1!3m2!1seX62QGw88_ZOQZHwN2nFrw!2e0!4m2!3m1!1s0x4887b806a23c0307:0x3d884a37fb246bfb">Google &quot;Street View&quot;</a> link to get an idea of where you should be heading.</p>
+
+
                 <h4>By foot</h4>
-                <p>From Leith Walk, find <a class="popup-gmaps" href="http://goo.gl/maps/4MVOR">Vittoria's</a>. We are just a few doors down from there. From London Road there are many streets to take, so best point the GPS on your mobile phone to <a class="popup-gmaps" href="https://maps.google.co.uk/maps?q=line+digital,+77+brunswick+street&hl=en&ll=55.96036,-3.179963&spn=0.009597,0.01929&sll=55.960408,-3.180327&sspn=0.009597,0.01929&hq=line+digital,&hnear=77+Brunswick+St,+Edinburgh+EH7+5HS,+United+Kingdom&t=m&z=16&iwloc=A">the office address.</a></p>
+                <p>Find your way to the Shore in Leith, we are very close to the Cameo Bar (we are on the other side of the bridge from The Kings Wark). Find the entrance to Commercial Quay (a large green archway next to the seat made from half a boat) and keep walking until you find the buzzer at number 86.</p>
                 <h4>By bus</h4>
-                <p>There are many bus services to Easter Road and London road, so we recommend the <a href="http://lothianbuses.com/plan-a-journey/journey-planner">Lothian Buses</a> journey planner to find a bus from your part of town.</p>
+
+
+                <p>There are many bus services to Commercial Street, including the very frequent 22 (Also serviced by the 16, 35 and 36). We recommend the <a target="_blank" href="http://lothianbuses.com/plan-a-journey/journey-planner">Lothian Buses journey planner</a> to find a bus from your part of town.
+
                 <h4>By train</h4>
-                <p>The office is a 15 minute walk from <a href="http://www.networkrail.co.uk/edinburgh-waverley-station/departures-arrivals/">Edinburgh Waverley train station</a>. We recommend you leave the station via the <a class="popup-gmaps" href="http://goo.gl/maps/rfEmM">Calton Road exit.</a></p>
+                <p>Get off the train at <a href="http://www.networkrail.co.uk/edinburgh-waverley-station/departures-arrivals/">Edinburgh Waverley train station</a> and jump on the Number 22 bus until you reach Commercial Street. Jump off the first stop after it crosses the bridge in the Shore.</a></p>
               </div>
               <div class="offset1 span6" id="contact-us">
                

@@ -2,8 +2,8 @@
       <section class="container">
         <div class="row">
           <div class="span5 pull-left">
-            <p>Venue / PHPizza and drinks sponsored by Line. Some talks may have their own sponsor.</p>			
-            <p class="line-logo"><a href="http://www.line.uk.com/">Sponsored by Line</a>, an Edinburgh Digital Agency</p>		
+            <p>Venue / PHPizza and drinks sponsored by Blonde Digital. Some talks may have their own sponsor.</p>			
+            <p class="line-logo"><a href="http://www.blonde.net/">Sponsored by Blonde Digital</a>, an Edinburgh Digital Agency</p>		
           </div>
         <div class="span4 offset3">
 			<p>Useful links</p>

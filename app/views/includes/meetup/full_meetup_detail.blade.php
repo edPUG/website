@@ -10,13 +10,13 @@
   <address itemprop="location" itemscope itemtype="http://schema.org/Place">
     <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
       <span itemprop="streetAddress">
-        Line Digital Ltd.<br />
-        77 Brunswick Street<br />
+        Blonde Digital<br />
+        86 Commercial Quay<br />
       </span>
       <span itemprop="addressLocality">Edinburgh<br /></span>
-      <span itemprop="postalCode">EH7 5HS<br /></span>
+      <span itemprop="postalCode">EH6 6LX<br /></span>
     </div>
-		<a itemprop="url" href="http://www.line.uk.com" target="_blank">line.uk.com</a>
+		<a itemprop="url" href="http://www.blonde.net" target="_blank">blonde.net</a>
 	</address>
 	
 	<p>See the <a href="{{ URL::route('home') }}#contact">Find us</a> section below for more information on getting to the venue.</p>
