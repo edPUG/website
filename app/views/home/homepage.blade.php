@@ -201,7 +201,7 @@
                   We use code, content, conversation and creativity to great effect.
                 </p>
                 <p>
-                  <a href="http://www.blonde.net/">http://www.blonde.net/</a>
+                  <a target="_blank" href="http://www.blonde.net/">http://www.blonde.net/</a>
                 </p>
               </div>
               <div class="span6">
@@ -215,7 +215,7 @@
                   We help developers work faster by automating common, repetitive tasks to enable them to stay focused on code design and the big picture.
                 </p>
                 <p>
-                  <a href="http://www.jetbrains.com/">http://www.jetbrains.com/</a>
+                  <a target="_blank" href="http://www.jetbrains.com/">http://www.jetbrains.com/</a>
                 </p>
               </div>
           </div>
