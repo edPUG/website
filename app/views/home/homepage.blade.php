@@ -205,7 +205,7 @@
                 </p>
               </div>
               <div class="span6">
-                <div style="text-align: center; margin-bottom: 20px;">
+                <div class="jetbrains-wrapper">
                   <img style="margin-top: 15px" src="/assets/img/jetbrains-logo.png" />
                 </div>
                 <p>

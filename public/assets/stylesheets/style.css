@@ -600,3 +600,18 @@ Ed The Pug
     0%    { left: 100% } 
     100%  { left: -10% } 
   }
+
+/*---------------------------------------------------------
+
+Sponsors
+
+----------------------------------------------------------*/
+
+.jetbrains-wrapper {
+  text-align: center;
+  width: 200px;
+  margin: auto;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 20px
+}
