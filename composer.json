@@ -8,7 +8,8 @@
 		"patricktalmadge/bootstrapper": "dev-develop",
 		"anahkiasen/former": "dev-master",
 		"way/generators": "dev-master",
-		"zizaco/confide": "1.0.x"
+		"zizaco/confide": "1.0.x",
+		"thujohn/twitter": "dev-master"
 	},
 	"autoload": {
 		"classmap": [

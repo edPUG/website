@@ -10,13 +10,23 @@
 |
 */
 Route::get('/', array('as' => 'home', 'uses' => 'HomeController@showHomepage'));
+
 Route::post(
     '/contact-form-ajax', 
     array(
-        'as' => 'contact-form-endpoint', 
+        'as'   => 'contact-form-endpoint', 
         'uses' => 'HomeController@contactFormEndpoint'
     )
 );
+
+Route::get(
+	'entries.json',
+	array(
+		'as'   => 'competition_entries',
+		'uses' => 'CompetitionController@getEntriesJson'
+	)
+);
+
 Route::any('/dev/null', array('as' => 'dev_null', function() {  return 'Computer says no!';  }));
 
 // Confide routes

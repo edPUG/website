@@ -119,7 +119,8 @@ return array(
 		'edPUG\EventBrite\EventBriteServiceProvider',
 		'Former\FormerServiceProvider',
 		'Way\Generators\GeneratorsServiceProvider',
-		'Zizaco\Confide\ConfideServiceProvider'
+		'Zizaco\Confide\ConfideServiceProvider',
+		 'Thujohn\Twitter\TwitterServiceProvider',
 	),
 
 	/*
@@ -217,7 +218,10 @@ return array(
 		'Former' => 'Former\Facades\Former',
 		
 		// Confide (Authentication)
-		'Confide' => 'Zizaco\Confide\ConfideFacade'
+		'Confide' => 'Zizaco\Confide\ConfideFacade',
+		
+		// Twitter
+		'Twitter' => 'Thujohn\Twitter\TwitterFacade',
 
 	),
 
