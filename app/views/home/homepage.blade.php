@@ -181,52 +181,53 @@
       </div>
     </section>
 
-    <section id="sponsors" class="content-row yellow">
-      <div class="container">
-        <div class="row">
-          <div class="span12">
-            <hgroup>
-              <h2>Sponsors</h2>
-              <h3>Thank you to all our sponsors</h3>
-            </hgroup>
-            <div class="row">
-              <div class="span6">
-                <div style="text-align: center; margin-bottom: 20px;">
-                  <img style="width: 200px" src="/assets/img/blonde_logo.png" />
-                </div>
-                <p>
-                  Blonde is a full service digital agency with 60 people in Edinburgh and London. It provides ingenious digital solutions to commercial problems.
-                </p>
-                </p>
-                  We use code, content, conversation and creativity to great effect.
-                </p>
-                <p>
-                  <a target="_blank" href="http://www.blonde.net/">http://www.blonde.net/</a>
-                </p>
-              </div>
-              <div class="span6">
-                <div class="jetbrains-wrapper">
-                  <img style="margin-top: 15px" src="/assets/img/jetbrains-logo.png" />
-                </div>
-                <p>
-                  We make professional software development a more productive and enjoyable experience. 
-                </p>
-                </p>
-                  We help developers work faster by automating common, repetitive tasks to enable them to stay focused on code design and the big picture.
-                </p>
-                <p>
-                  <a target="_blank" href="http://www.jetbrains.com/">http://www.jetbrains.com/</a>
-                </p>
-              </div>
-          </div>
-          </div>
-        </div>
-      </div>
-    </section>
 
 	<section class="map-row">
 		<div id="map-canvas"></div>
 	</section>
+    
+  <section id="sponsors" class="content-row yellow">
+    <div class="container">
+      <div class="row">
+        <div class="span12">
+          <hgroup>
+            <h2>Sponsors</h2>
+            <h3>Thank you to all our sponsors</h3>
+          </hgroup>
+          <div class="row">
+            <div class="span6">
+              <div style="text-align: center; margin-bottom: 20px;">
+                <img style="width: 200px" src="/assets/img/blonde_logo.png" />
+              </div>
+              <p>
+                Blonde is a full service digital agency with 60 people in Edinburgh and London. It provides ingenious digital solutions to commercial problems.
+              </p>
+              </p>
+                We use code, content, conversation and creativity to great effect.
+              </p>
+              <p>
+                <a target="_blank" href="http://www.blonde.net/">http://www.blonde.net/</a>
+              </p>
+            </div>
+            <div class="span6">
+              <div class="jetbrains-wrapper">
+                <img style="margin-top: 15px" src="/assets/img/jetbrains-logo.png" />
+              </div>
+              <p>
+                We make professional software development a more productive and enjoyable experience. 
+              </p>
+              </p>
+                We help developers work faster by automating common, repetitive tasks to enable them to stay focused on code design and the big picture.
+              </p>
+              <p>
+                <a target="_blank" href="http://www.jetbrains.com/">http://www.jetbrains.com/</a>
+              </p>
+            </div>
+        </div>
+        </div>
+      </div>
+    </div>
+ </section>
 
     @if (0)
     <div id="do-a-talk">
