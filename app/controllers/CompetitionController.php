@@ -4,11 +4,10 @@ class CompetitionController extends BaseController {
 
 	public function getEntriesJson()
 	{
-		$handle  = 'edpug';
-		$hashtag = strtolower(date('My')) . 'comp';
-		
-		$testMode = (bool)Input::get('test');
-			
+		$handle   = 'edpug';
+		$testMode = (bool) Input::get('test', false);
+		$hashtag = Input::get('hashtag', strtolower(date('My')) . 'comp');
+
 		$searchQuery = $testMode ? "@{$handle}" : "@{$handle} #{$hashtag}";
 
 		$results = Twitter::getSearch(array('q' => $searchQuery, 'format' => 'array'));
