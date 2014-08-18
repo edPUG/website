@@ -26,7 +26,10 @@ class CompetitionController extends BaseController {
 			// user must be following edpug!
 			if (!$testMode && !$tweet['user']['following']) {
 				continue;
-			}
+      }
+
+      //Switch out the normal image for a larger version
+      $tweet['user']['profile_image_url'] = str_replace('_normal.png', '.png', $tweet['user']['profile_image_url']);
 
 			// grab only certain values from the returned data
 			// and group by screen name to remove duplicates
