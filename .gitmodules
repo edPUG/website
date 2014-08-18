@@ -1,0 +1,3 @@
+[submodule "public/competition"]
+	path = public/competition
+	url = https://github.com/stephenheron/twitter-competition.git
