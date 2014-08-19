@@ -23,8 +23,10 @@ class CompetitionController extends BaseController {
 
             foreach ($results as $tweet) {
 
-                //Switch out the normal image for a larger version
-                $tweet['user']['profile_image_url'] = str_replace('_normal.png', '.png', $tweet['user']['profile_image_url']);
+                // Switch out the normal image for a larger version
+                foreach (array('png', 'jpg', 'jpeg', 'gif') as $fileExtension) {
+                    $tweet['user']['profile_image_url'] = str_replace('_normal.' . $fileExtension, '.' . $fileExtension, $tweet['user']['profile_image_url']);
+                }
 
                 // grab only certain values from the returned data
                 // and group by screen name to remove duplicates
