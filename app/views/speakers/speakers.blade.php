@@ -53,7 +53,7 @@
                     <div class="row">
                         <div class="span12">
 
-                            <iframe src="https://docs.google.com/forms/d/1sbo3j_nSWGMQCXTtPr-ODMIsFh9CnuPi7BQfDnRUDno/viewform?embedded=true" width="760" height="1200" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+                            <iframe src="https://docs.google.com/forms/d/1sbo3j_nSWGMQCXTtPr-ODMIsFh9CnuPi7BQfDnRUDno/viewform?embedded=true" width="100%" height="1400" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
 
                         </div>
 
