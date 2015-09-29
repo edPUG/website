@@ -27,6 +27,8 @@ Route::get(
 	)
 );
 
+Route::get( 'speakers',  array('as' => 'speakers', 'uses' =>  'HomeController@speakers'));
+
 Route::any('/dev/null', array('as' => 'dev_null', function() {  return 'Computer says no!';  }));
 
 // Confide routes

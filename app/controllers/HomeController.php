@@ -9,7 +9,12 @@ class HomeController extends BaseController {
 			->with('contact', new ContactMessage())
 		;
     }
-       
+
+    public function speakers()
+    {
+        return View::make('speakers/speakers');
+    }
+
     /**
      * Handling POST requests to /contact-form-ajax
      * 

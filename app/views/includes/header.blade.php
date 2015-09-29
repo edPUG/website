@@ -18,13 +18,14 @@
 			</button>
 			{{-- smooth scroll needs urls to be relative, so only add home route prefix if not on homepage  --}}
 				
-			<a class="brand" href="{{ Route::currentRouteName() == 'home' ? '' : URL::route('home') }}#home">ed<span>PUG</span></a>
+			<a class="brand" href="{{ Route::currentRouteName() == 'home' ? '' : URL::route('home') }}#home" title="edPUG Homepage">ed<span>PUG</span></a>
 			<div class="nav-collapse collapse">
 				<ul class="nav pull-right">
 					<li><a href="{{ Route::currentRouteName() == 'home' ? '' : URL::route('home') }}#welcome">About</a></li>
 					<li><a href="{{ Route::currentRouteName() == 'home' ? '' : URL::route('home') }}#meetup">Next meetup</a></li>
 					<li><a href="{{ Route::currentRouteName() == 'home' ? '' : URL::route('home') }}#expect">What to expect</a></li>
 					<li><a href="{{ Route::currentRouteName() == 'home' ? '' : URL::route('home') }}#contact">Find / Contact us</a></li>           
+					<li><a href="{{ URL::route('speakers') }}">Become a Speaker</a></li>
 					@if (Auth::check())
 					@if (Auth::user()->is_admin)
 					<li><a href="/admin">Admin</a></li> 
@@ -36,6 +37,9 @@
 					<li class="facebook">
 						<a target="_blank" href="https://www.facebook.com/groups/50315848110/">Facebook</a>
 					</li>
+                    <li class="twitter">
+                        <a target="_blank" href="https://twitter.com/edpug">Twitter</a>
+                    </li>
 				</ul>
 			</div>
         </div>
