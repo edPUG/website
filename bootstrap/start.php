@@ -29,7 +29,7 @@ $app->redirectIfTrailingSlash();
 $env = $app->detectEnvironment(array(
 
   'local' => array('helvetica', 'centos.abbey', 'phil-laptop', 'stephen-virtualBox'),
-
+  'prod' => array('ip-10-35-148-140', 'edpug.co.uk', 'www.edpug.co.uk')
 
 ));
 
