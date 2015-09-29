@@ -31,6 +31,9 @@
                             <p>All three formats are very popular with our atendees, with the streaming options giving you the option from presenting in the <strong>comfort of your own home</strong>!</p>
 
                         </div>
+                        <div class="span12">
+                            <p>Interested? Fill in our <a class="brand" href="#contact-form">contact form!</a></p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -39,7 +42,7 @@
 
 
 
-    <section class="content-row blue" id="expect">
+    <section class="content-row blue" id="contact-form">
         <div class="container">
             <div class="row">
                 <div class="span12">
