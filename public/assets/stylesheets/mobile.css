@@ -31,6 +31,7 @@
 		padding: 12px 15px 10px;
 	}
 	header.navbar .nav > li.facebook,
+	header.navbar .nav > li.twitter,
 	#meetup .iconrow .clock-wrapper {
 		display: none;
 	}

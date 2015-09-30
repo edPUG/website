@@ -1,5 +1,9 @@
 @extends('layouts.master_mastheadless')
 
+@section('title')
+     Become a Speaker :: @parent
+    @stop
+
 @section('content')
 
     <section class="content-row white" id="welcome">
@@ -28,7 +32,7 @@
                                 <li>A <strong>live streaming talk</strong> that is presented over Skype or Google Hangouts with a quick Q&A afterwards.</li>
                             </ul>
 
-                            <p>All three formats are very popular with our atendees, with the streaming options giving you the option from presenting in the <strong>comfort of your own home</strong>!</p>
+                            <p>All three formats are very popular with our attendees, with the streaming options giving you the option from presenting in the <strong>comfort of your own home</strong>!</p>
 
                         </div>
                         <div class="span12">
