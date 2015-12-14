@@ -7,7 +7,7 @@ class DateHelper {
   public static function timeUntilNextMeetup()
   {
     $difference = self::calculateDifference();
-    if($difference->format('%a') < 1){
+    if($difference->format('%a') <= 1){
       $timeRemaining = $difference->format('%h hours, %i minutes');
     } else {
       $difference = self::calculateDifference(true);
