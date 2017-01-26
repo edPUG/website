@@ -19,7 +19,8 @@ class CreateTalkTable extends Migration {
       $table->string('title');
       $table->text('description');
       $table->string('image');
-      $table->timestamps();
+$table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
+$table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
     });
 	}
 

@@ -18,7 +18,9 @@ class CreateContactMessageTable extends Migration {
                         $table->string('from_email', 100);
                         $table->string('subject', 100)->nullable();
                         $table->text('message');
-			$table->timestamps();
+$table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
+$table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
+
 		});
 	}
 

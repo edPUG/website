@@ -21,7 +21,10 @@ class AddMeetupTable extends Migration {
       $table->text('description')->nullable();
       $table->text('resources')->nullable();
       $table->boolean('active')->default(false);
-      $table->timestamps();
+$table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
+$table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP'));      
+
+
     });
 	}
 

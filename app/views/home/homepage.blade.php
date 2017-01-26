@@ -10,6 +10,7 @@
 				<h1>Welcome to <abbr title="Edinburgh PHP User Group" class="subtle">edPUG</abbr></h1>
 				<h2>The Edinburgh PHP User Group</h2>
 			</hgroup>
+
             <div class="row">
               <div class="span6">
                 <p>
@@ -18,11 +19,17 @@
                 </p>
               </div>
               <div class="span6">
-                <p>
+
+<h4 style="color: red;">We are finalizing a more central venue for 2017 so ther will be no edPUG in January 2017</h4>
+<p>Watch this space for updates!</p>
+
+<!--                
+<p>
                   <abbr title="Edinburgh PHP User Group">edPUG</abbr> takes place on the <em>{{ Config::get('edpug.day_repetition') }} {{ Config::get('edpug.day') }}</em> of every month, making the next edPUG in <strong>{{ edPUG\Helpers\DateHelper::timeUntilNextMeetup() }}</strong>.
                   It is free to come along, but we issue electronic tickets via Eventbrite to control the capacity of the venue.
                   Get your ticket early to avoid disappointment! We&rsquo;ll also email those with a free ticket with a reminder a few days before the event.
                 </p>
+-->
                 
                 @if ($next_meetup)
                   <a class="btn book-btn" href="http://edpug.eventbrite.co.uk">Get your free ticket now!</a>

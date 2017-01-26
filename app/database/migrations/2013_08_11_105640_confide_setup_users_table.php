@@ -20,7 +20,9 @@ class ConfideSetupUsersTable extends Migration {
             $table->string('password');
             $table->string('confirmation_code');
             $table->boolean('confirmed')->default(false);
-            $table->timestamps();
+$table->timestamp('created_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
+$table->timestamp('updated_at')->default(\DB::raw('CURRENT_TIMESTAMP'));
+
         });
 
         // Creates password reminders table

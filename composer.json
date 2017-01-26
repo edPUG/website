@@ -2,8 +2,13 @@
 	"name": "laravel/laravel",
 	"description": "The Laravel Framework.",
 	"keywords": ["framework", "laravel"],
-	"require": {
-		"laravel/framework": "4.0.*",
+	"repositories":[
+{
+      "type": "git",
+      "url": "https://github.com/jadz/laravel-framework-4.2.18-php7"
+    }],
+        "require": {
+		"laravel/framework": "dev-master",
 		"frozennode/administrator": "dev-dev",
 		"patricktalmadge/bootstrapper": "dev-develop",
 		"anahkiasen/former": "dev-master",
