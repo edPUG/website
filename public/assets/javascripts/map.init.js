@@ -2,9 +2,9 @@
 
   var directionsDisplay;
   var directionsService = new google.maps.DirectionsService();
-  var officeLatLng = new google.maps.LatLng(55.977013,-3.173105);
+  var officeLatLng = new google.maps.LatLng(55.946793, -3.202395);
   var edinburghAirport = new google.maps.LatLng(55.9500, -3.3725);
-  var trainStation = new google.maps.LatLng(55.95151, -3.19177);
+  var trainStation = new google.maps.LatLng(55.945727, -3.218117);
   var map;
   var officeMarker;
   var startMaker;
@@ -32,12 +32,12 @@
     });
   }
 
-  function directions(origin, marker) {
+  function directions(origin, marker, travelMode) {
 
     var request = {
       origin:origin,
       destination:officeLatLng,
-      travelMode: google.maps.DirectionsTravelMode.DRIVING
+      travelMode: travelMode
     };
 
     directionsService.route(request, function(response, status) {
@@ -65,12 +65,12 @@
 
     $("#plane-map").click(function(e) {
       e.preventDefault();
-      directions(edinburghAirport, '/assets/img/site/map/airport.png');
+      directions(edinburghAirport, '/assets/img/site/map/airport.png', google.maps.DirectionsTravelMode.DRIVING);
     });
     
     $("#train-map").click(function(e) {
       e.preventDefault();
-      directions(trainStation, '/assets/img/site/map/train.png');
+      directions(trainStation, '/assets/img/site/map/train.png', google.maps.DirectionsTravelMode.WALKING);
     });
 
     $('.map-update').click(function(e) {

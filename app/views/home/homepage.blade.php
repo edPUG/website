@@ -20,16 +20,13 @@
               </div>
               <div class="span6">
 
-<h4 style="color: red;">We are finalizing a more central venue for 2017 so ther will be no edPUG in January 2017</h4>
-<p>Watch this space for updates!</p>
-
-<!--                
+                
 <p>
                   <abbr title="Edinburgh PHP User Group">edPUG</abbr> takes place on the <em>{{ Config::get('edpug.day_repetition') }} {{ Config::get('edpug.day') }}</em> of every month, making the next edPUG in <strong>{{ edPUG\Helpers\DateHelper::timeUntilNextMeetup() }}</strong>.
                   It is free to come along, but we issue electronic tickets via Eventbrite to control the capacity of the venue.
                   Get your ticket early to avoid disappointment! We&rsquo;ll also email those with a free ticket with a reminder a few days before the event.
                 </p>
--->
+
                 
                 @if ($next_meetup)
                   <a class="btn book-btn" href="http://edpug.eventbrite.co.uk">Get your free ticket now!</a>
@@ -135,26 +132,36 @@
               <div class="span5">
                 <h4>The venue</h4>
                 <address>
-                  <a target="_blank" href="https://www.google.co.uk/maps/place/Blonde+Digital/@55.977244,-3.173203,17z/data=!3m1!4b1!4m2!3m1!1s0x4887b80420069c0f:0x3e1e3ea5cc7b7db0">Blonde Digital Ltd.</a><br />
-                  86 Commercial Quay <br /> Edinburgh <br />EH6 6LX<br />
-                  <a href="http://www.blonde.net/" target="_blank">blonde.net</a>
-                </address>
+                  <a target="_blank" href="https://www.google.co.uk/maps/place/CivTech%C2%AE/@55.9470004,-3.2037949,17z/data=!3m1!4b1!4m5!3m4!1s0x4887c79906150e99:0xe5f06e2312b47501!8m2!3d55.9469974!4d-3.2016062">CivTech</a><br />
+                  CodeBase<br>
+		  Level L<br>
+                 38 Castle Terrace<br>
+                 Edinburgh<br>
+                 EH3 9DZ<br>                  
 
-                <p>We are tucked away on Commercial Quay, the cobbled area at the back of Commercial Street, overlooking the Scottish Govenment Building.
-                We are next to the Bond No 9 pub. If you are on Commercial Street looking at Bonde No 9 you are on the wrong side of the building (Sneak through the pub to the back!)</p>
+                                </address>
 
-                <p>Take a look at this <a target="_blank" href="https://www.google.co.uk/maps/place/Commercial+Quay/@55.977202,-3.172609,3a,90y,199h,90t/data=!3m4!1e1!3m2!1seX62QGw88_ZOQZHwN2nFrw!2e0!4m2!3m1!1s0x4887b806a23c0307:0x3d884a37fb246bfb">Google &quot;Street View&quot;</a> link to get an idea of where you should be heading.</p>
+                <p>Please enter CodeBase using the Lady Lawson Street entrance, and make your way to floor L using the lift or stairs.</p>
+
+<p>We will try and greet you by the entrance and on floor L.<p>
+
+                <p>Take a look at this <a target="_blank" href="https://www.google.co.uk/maps/@55.9462764,-3.2012813,3a,75y,36.82h,82.79t/data=!3m6!1e1!3m4!1sRu19PGe1KjcB3-OHC8VVvQ!2e0!7i13312!8i6656!6m1!1e1">Google &quot;Street View&quot;</a> link to get an idea of where you should be heading.</p>
+
+ @if (0)
 
 
                 <h4>By foot</h4>
                 <p>Find your way to the Shore in Leith, we are very close to the Cameo Bar (we are on the other side of the bridge from The Kings Wark). Find the entrance to Commercial Quay (a large green archway next to the seat made from half a boat) and keep walking until you find the buzzer at number 86.</p>
-                <h4>By bus</h4>
-
+                
+<h4>By bus</h4>
 
                 <p>There are many bus services to Commercial Street, including the very frequent 22 (Also serviced by the 16, 35 and 36). We recommend the <a target="_blank" href="http://lothianbuses.com/plan-a-journey/journey-planner">Lothian Buses journey planner</a> to find a bus from your part of town.
 
                 <h4>By train</h4>
                 <p>Get off the train at <a href="http://www.networkrail.co.uk/edinburgh-waverley-station/departures-arrivals/">Edinburgh Waverley train station</a> and jump on the Number 22 bus until you reach Commercial Street. Jump off the first stop after it crosses the bridge in the Shore.</a></p>
+@endif
+
+
               </div>
               <div class="offset1 span6" id="contact-us">
                
@@ -204,16 +211,12 @@
           <div class="row">
             <div class="span6">
               <div style="text-align: center; margin-bottom: 20px;">
-                <img style="width: 200px" src="/assets/img/blonde_logo.png" />
+                <img style="width: 200px" src="/assets/img/civtech.jpg" />
               </div>
               <p>
-                Blonde is a full service digital agency with 60 people in Edinburgh and London. It provides ingenious digital solutions to commercial problems.
-              </p>
-              </p>
-                We use code, content, conversation and creativity to great effect.
-              </p>
-              <p>
-                <a target="_blank" href="http://www.blonde.net/">http://www.blonde.net/</a>
+                The CivTech pilot is harnessing new technologies to drive daring and innovation into the public sector. It brings together private sector innovation, public sector organisations and citizens to develop more efficient and effective products and services, which will translate to new, better, faster and easier experiences for everyone.              </p>
+                           <p>
+                <a target="_blank" href="http://www.gov.scot/Topics/Economy/digital/digitalservices/civtech">Visit website</a>
               </p>
             </div>
             <div class="span6">
@@ -242,7 +245,7 @@
         <h2>Do a talk?</h2>
 
         <p>
-    Yourself / get your company to sponsor. Great opportunity to talk to a friendly...
+    Yourself / get your company to sponsor. Great opportunity to talk to a friendly......
 
         </p>
     </div>
